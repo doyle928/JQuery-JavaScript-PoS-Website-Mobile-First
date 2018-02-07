@@ -1,10 +1,8 @@
-$('.sideNavButton').click(function () {
-    $('#sideNav').toggle('slide', {
-        direction: 'left'
-    }, 1000);
-})
-$('#sideNav').click(function () {
-    // $('#sideNav').toggle('slide', {
-    //     direction: 'left'
-    // }, 1000);
+$(document).ready(function () {
+    $(".sideNavButton").click(function () {
+        $("#sideNav").toggle("slide",300);        
+    });
+    $("#sideNav").click(function () {
+        $("#sideNav").toggle("slide",300);        
+    });
 });

@@ -10,12 +10,25 @@ html{
 }
 #sideNav {
   display: none;
-  border : 1px solid #000;
+  background-color: lightgrey;
   width: 200px;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+}
+.listitem {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 0px;
+  font-weight: bold;
+}
+.listitem a{
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  color: black;
 }
 .collectionDiv {
     position: relative;
@@ -33,9 +46,6 @@ html{
   right: 16px;
   left: 16px;
   text-shadow: -1px 0 rgba(0,0,0,.5), 0 1px rgba(0,0,0,.5), 1px 0 rgba(0,0,0,.5), 0 -1px rgba(0,0,0,.5);
-}
-#sideNav {
-  display: none;
 }
 .topnav {
   display: flex;
