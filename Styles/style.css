@@ -16,6 +16,9 @@ html{
   margin: 15px;
   /* opacity: 0.5; */
 }
+a:visited{
+  color: white;
+}
 .collectionText {
   position: absolute;
   top: 8px;
