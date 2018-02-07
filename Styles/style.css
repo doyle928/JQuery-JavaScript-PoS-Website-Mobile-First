@@ -5,6 +5,15 @@ html{
   color: #666666;
   font-size: 25px;
 }
+#sideNav {
+  display: none;
+  border : 1px solid #000;
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .collectionDiv {
     position: relative;
     text-align: center;
