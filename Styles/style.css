@@ -1,3 +1,6 @@
+#sidenav{
+  margin-bottom: 10%;
+}
 html{
   font-family: 'Raleway', sans-serif;
 }
@@ -20,13 +23,9 @@ html{
     color: white;
 }
 .collectionImage{
-  width: 95%;
+  width: 98%;
   height: auto;
-  margin: 15px;
-  /* opacity: 0.5; */
-}
-a:visited{
-  color: white;
+  margin-top: 3%;
 }
 .collectionText {
   position: absolute;
@@ -46,4 +45,13 @@ a:visited{
     display: block;
     padding: 0;
     margin: 0;
+}
+#everyDayShirtsCollectionPage{
+  display: none;
+}
+#dressShirtsCollectionPage{
+  display: none;
+}
+#jeansCollectionPage{
+  display: none;
 }
