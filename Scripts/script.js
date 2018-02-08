@@ -1,17 +1,15 @@
 var counter = 0;
 $(document).ready(function () {
-<<<<<<< HEAD
             $("#cashPay").hide();
         $("#creditCardPay").hide();
+        $("#cartCounter").hide();
   for(i=0; i<12; i++) {
   $(".productCart"+ (i+1)).hide();
   }
-=======
     $("#cartCounter").hide();
     for (i = 0; i < 12; i++) {
         $(".productCart" + (i + 1)).hide();
     }
->>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
 
     $("#receiptPage").hide();
     //moblie sliding nav bar
@@ -23,11 +21,7 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
-<<<<<<< HEAD
-    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event){
-=======
-    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event) {
->>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
+    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event) {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -120,30 +114,25 @@ $(document).ready(function () {
                 if (expireMonth != null || expireMonth != "") {
                     if (expireYear != null || expireYear != "") {
                         if (cvv != null || cvv != "") {
-                            $("#main").hide();
-                            $("#everyDayShirtsCollectionPage").hide();
-                            $("#dressShirtsCollectionPage").hide();
-                            $("#jeansCollectionPage").hide();
-                            $("#cartPage").hide();
                             $("#receiptPage").show();
                             $("#paymentButtons").hide();
                             $("#cashPay").hide();
                             $("#creditCardPay").hide();
                             $("#paymentChoice").hide();
                         } else {
-                            return false;
+                            alert("");
                         }
                     } else {
-                        return false;
+                        alert("");
                     }
                 } else {
-                    return false;
+                    alert("");
                 }
             } else {
-                return false;
+                alert("");
             }
         } else {
-            return false;
+            alert("");
         }
     })
 
@@ -153,8 +142,7 @@ $(document).ready(function () {
             if (cashGiven >= total) {
                 var change = cashGiven - total;
                 $("#receiptPage > p").append(change);
-
-
+                $("#receiptPage").show();
             }
         }
     })

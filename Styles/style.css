@@ -216,6 +216,7 @@ texatrea:focus, input:focus, select:focus{
 #cashPay {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
 #ccPayButton {
   width: 100%;
@@ -225,7 +226,7 @@ texatrea:focus, input:focus, select:focus{
   flex-direction: column;
 }
 #creditCardPay {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 #cartCounter {
   position: fixed;
