@@ -1,5 +1,8 @@
 $(document).ready(function () {
-
+  // hide products from cart to start
+  for(i=0; i<12; i++) {
+  $("#productCart"+ (i+1)).hide();
+  }
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -46,9 +49,12 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
+        $("#cartPage").show();
         $("#receiptPage").hide();
-        $("#paymentChoice").show();
+        // $("#paymentChoice").show();
+        $(".cartPayIcon").empty();
+        $(".cartPayIcon").text("payment");
+
     });
     $(".payment").click(function () {
         $("#main").hide();
@@ -76,6 +82,7 @@ $(document).ready(function () {
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
         $("#cartPage").hide();
+
         $("#receiptPage").hide();
         $("#paymentButtons").hide();
         $("#cashPay").hide();
@@ -157,8 +164,21 @@ $(document).ready(function () {
             }
         }
     })
-    
+    $("#cashTendered").val();
+    $("#owner").val();
+    $("#cvv").val();
+    $("#cardNumber").val();
 
 
+    // add products to cart
+    $(".productBuyButton").click(function() {
+      var productId = $(this).attr("data-product-id");
+      $("#productCart" + productId).show();
+    });
+
+    // remove products from cart
+    $(".productRemoveButton").click(function() {
+      $(this).parent().parent().hide();
+    });
 
 });

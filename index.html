@@ -26,7 +26,7 @@
                 <i class="material-icons liIcon">navigate_next</i>
             </li>
             <li class="listitem everydayButton sideEveryday">
-                <p>EVERDAY SHIRTS</p>
+                <p>EVERYDAY SHIRTS</p>
                 <i class="material-icons liIcon">navigate_next</i>
             </li>
             <li class="listitem dressButton sideDress">
@@ -53,11 +53,11 @@
             <strong>ASHES</strong>&
             <strong>ONTARIO</strong>
         </p>
-        <i class="material-icons cartButton">shopping_cart</i>
+        <i class="cartPayIcon material-icons cartButton">shopping_cart</i>
     </div>
     <div id="main">
         <div class="collectionDiv everydayButton" id="everyDayShirtsCollectionDiv">
-            <img id="everyDayShirtsCollectionImage" class="collectionImage" alt="Every Day Shirts Collection" src="Images/everyday1.jpg">
+            <img id="everyDayShirtsCollectionImage" class="collectionImage" alt="Everyday Shirts Collection" src="Images/everyday1.jpg">
             <div class="collectionText">
                 <h2>Every Day Shirts Collection</h2>
                 <p>It's an everyday casual button down that can be worn at work, play, or school – everyday.</p>
@@ -86,7 +86,7 @@
                 <h2>Everyday Shirt 1</h2>
                 <p>Everyday shirt 1</p>
                 <h3 class="product1 price">$79</h3>
-                <button id="productBuyButton1" class="productBuyButton">Buy</button>
+                <button data-product-id="1" class="productBuyButton">Buy</button>
             </div>
         </div>
         <hr>
@@ -209,7 +209,7 @@
     <!-- <<<<<<<<<<<<<< PAYMENT CHOICE >>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div id="cartPage">
         <div class="cartPage">
-            <div class="product1 productDiv">
+            <div id="productCart1" class="productDiv">
                 <img class="productImage" src="Images/everyday3.jpg">
                 <div class="productText">
                     <h2>Everyday Shirt 1</h2>
@@ -218,7 +218,7 @@
                     <button id="productRemoveButton1" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product2 productDiv">
+            <div id="productCart2" class="productDiv">
                 <img class="productImage" src="Images/everyday4.jpg">
                 <div class="productText">
                     <h2>Everyday Shirt 2</h2>
@@ -227,7 +227,7 @@
                     <button id="productRemoveButton2" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product3 productDiv">
+            <div id="productCart3" class="productDiv">
                 <img class="productImage" src="Images/everyday5.jpg">
                 <div class="productText">
                     <h2>Everyday Shirt 3</h2>
@@ -236,7 +236,7 @@
                     <button id="productRemoveButton3" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product4 productDiv">
+            <div id="productCart4" class="productDiv">
                 <img class="productImage" src="Images/everyday6.jpg">
                 <div class="productText">
                     <h2>Everyday Shirt 4</h2>
@@ -245,7 +245,7 @@
                     <button id="productRemoveButton4" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product5 productDiv">
+            <div id="productCart5" class="productDiv">
                 <img class="productImage" src="Images/dress1.jpg">
                 <div class="productText">
                     <h2>Dress Shirt 1</h2>
@@ -254,7 +254,7 @@
                     <button id="productRemoveButton5" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product6 productDiv">
+            <div id="productCart6" class="productDiv">
                 <img class="productImage" src="Images/dress2.jpg">
                 <div class="productText">
                     <h2>Dress Shirt 2</h2>
@@ -263,7 +263,7 @@
                     <button id="productRemoveButton6" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product7 productDiv">
+            <div id="productCart7" class="productDiv">
                 <img class="productImage" src="Images/dress3.jpg">
                 <div class="productText">
                     <h2>Dress Shirt 3</h2>
@@ -272,7 +272,7 @@
                     <button id="productRemoveButton7" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product8 productDiv">
+            <div id="productCart8" class="productDiv">
                 <img class="productImage" src="Images/dress5.jpg">
                 <div class="productText">
                     <h2>Dress Shirt 4</h2>
@@ -281,7 +281,7 @@
                     <button id="productRemoveButton8" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product9 productDiv">
+            <div id="productCart9" class="productDiv">
                 <img class="productImage" src="Images/jeans2.jpg">
                 <div class="productText">
                     <h2>Jeans 1</h2>
@@ -290,7 +290,7 @@
                     <button id="productRemoveButton9" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product10 productDiv">
+            <div id="productCart10" class="productDiv">
                 <img class="productImage" src="Images/jeans3.jpg">
                 <div class="productText">
                     <h2>Jeans 2</h2>
@@ -299,7 +299,7 @@
                     <button id="productRemoveButton10" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product11 productDiv">
+            <div id="productCart11" class="productDiv">
                 <img class="productImage" src="Images/jeans4.jpg">
                 <div class="productText">
                     <h2>Jeans 3</h2>
@@ -308,7 +308,7 @@
                     <button id="productRemoveButton11" class="productRemoveButton">Remove</button>
                 </div>
             </div>
-            <div class="product12 productDiv">
+            <div id="productCart12" class="productDiv">
                 <img class="productImage" src="Images/jeans6.jpg">
                 <div class="productText">
                     <h2>Jeans 4</h2>
@@ -319,10 +319,11 @@
             </div>
         </div>
     </div>
+    <!-- replaced these with payment icon in nav
     <div class="payment" id="paymentChoice">
         <button type="button" class="paymentButton" id="cashButton">Cash</button>
         <button type="button" class="paymentButton" id="creditCardButton">Credit Card</button>
-    </div>
+    </div> -->
 
     <!-- <<<<<<<<<<<<<< CASH PAY >>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="payment" id="cashPay">

@@ -149,7 +149,7 @@ html {
   width: 60%;
 }
 
-h2, h3, h4, .productText{
+h2, h3, h4 {
   margin-top: 3%;
   margin-bottom: 5%;
 }
@@ -164,16 +164,16 @@ h2, h3, h4, .productText{
 }
 
 button{
-  width: 45px;
+  min-width: 45px;
   height: 45px;
   background-color: #666666;
   color: white;
   float: left;
   margin-right: 1%;
 }
-.productBuyButton {
+.productBuyButton, .productRemoveButton {
   float: right;
-  margin-top: -7%;
+  margin-top: -15%;
 }
 
 #creditCardPay {
