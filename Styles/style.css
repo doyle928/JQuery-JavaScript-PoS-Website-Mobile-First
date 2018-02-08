@@ -65,3 +65,15 @@ html{
 #jeansCollectionPage{
   display: none;
 }
+#paymentChoice {
+  display: none;
+}
+#cashPay {
+  display: none;
+}
+#creditCardPay {
+  display: none;
+}
+#receiptPage {
+  display: none;
+}
