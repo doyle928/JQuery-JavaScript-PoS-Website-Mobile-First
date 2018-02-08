@@ -9,7 +9,8 @@ $(document).ready(function () {
             $(".productReceipt" + (i + 1)).hide();
         }
 
-    $("#receiptPage").hide();
+    // $("#receiptPage").hide();
+    
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -156,6 +157,7 @@ $(document).ready(function () {
     $(".productBuyButton").click(function () {
         var productId = $(this).attr("data-product-id");
         $(".productCart" + productId).show();
+        $(".productReceipt" + productId).show();
         counter++;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
