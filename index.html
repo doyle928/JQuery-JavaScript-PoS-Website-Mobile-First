@@ -27,7 +27,10 @@
     </div>
     <div class="topnav">
         <i class="material-icons sideNavButton">menu</i>
-        <p id="logo" class="homeButton"><strong>ASHES</strong>&<strong>ONTARIO</strong></p>
+        <p id="logo" class="homeButton">
+            <strong>ASHES</strong>&
+            <strong>ONTARIO</strong>
+        </p>
         <i class="material-icons cartButton">shopping_cart</i>
     </div>
     <div id="main">
@@ -68,6 +71,49 @@
     <div class="payment" id="cashPay">
     </div>
     <div class="payment" id="creditCardPay">
+        <form>
+            <div class="cc owner">
+                <label for="owner">Owner</label>
+                <input type="text" class="form-input " id="owner">
+            </div>
+            <div class="cc CVV">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-input" id="cvv">
+            </div>
+            <div class="cc" id="card-number-field">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="cc" id="cardNumber">
+            </div>
+            <div class="cc" id="expiration-date">
+                <label>Expiration Date</label>
+                <select>
+                    <option value="01">January</option>
+                    <option value="02">February </option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select>
+                    <option value="16"> 2018</option>
+                    <option value="17"> 2019</option>
+                    <option value="18"> 2020</option>
+                    <option value="19"> 2021</option>
+                    <option value="20"> 2022</option>
+                    <option value="21"> 2023</option>
+                </select>
+            </div>
+            <div class="cc" id="pay-now">
+                <button type="submit" id="payButton">Pay Now</button>
+            </div>
+
+        </form>
     </div>
     <div class="payment" id="receiptPage">
     </div>
