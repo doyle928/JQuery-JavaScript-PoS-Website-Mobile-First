@@ -68,6 +68,7 @@ $(document).ready(function () {
         $("#receiptPage").hide();
         $("#paymentButtons").hide();
         $("#cashPay").show();
+        $("#paymentChoice").show();
     })
     $("#creditCardButton").click(function () {
         $("#main").hide();
@@ -79,6 +80,7 @@ $(document).ready(function () {
         $("#paymentButtons").hide();
         $("#cashPay").hide();
         $("#creditCardPay").show();
+        $("#paymentChoice").show();
 
     })
     $("#cashPaySubmit").click(function () {
@@ -91,25 +93,72 @@ $(document).ready(function () {
         $("#paymentButtons").hide();
         $("#cashPay").hide();
         $("#creditCardPay").hide();
-    })
-    $("#ccPaySubmit").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").show();
-        $("#paymentButtons").hide();
-        $("#cashPay").hide();
-        $("#creditCardPay").hide();
+        $("#paymentChoice").hide();
     })
 
+
     //everyday add to cart buttons
+
+    var subTotal = 40; //$().val();
+    var owner = $("#owner").val();
+    var ccNumber = $("#cardNumber").val();
+    var expireMonth = $("#month").val();
+    var expireYear = $("#year").val();
+    var cvv = $("#cvv").val();
+    function salesTax(total) {
+        total = subTotal * 1.06;
+        console.log(total);
+        return total;
+    }
+    var total =  salesTax(subTotal);
+
+    $("#ccPayButton").click(function (event) {
+        event.preventDefault();
+        if (owner != null || owner != "") {
+            if (ccNumber != null || ccNumber != "") {
+                if (expireMonth != null || expireMonth != "") {
+                    if (expireYear != null || expireYear != "") {
+                        if (cvv != null || cvv != "") {
+                            $("#main").hide();
+                            $("#everyDayShirtsCollectionPage").hide();
+                            $("#dressShirtsCollectionPage").hide();
+                            $("#jeansCollectionPage").hide();
+                            $("#cartPage").hide();
+                            $("#receiptPage").show();
+                            $("#paymentButtons").hide();
+                            $("#cashPay").hide();
+                            $("#creditCardPay").hide();
+                            $("#paymentChoice").hide();
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    })
+
+    $("#cashPaySubmit").click(function(){
+        var cashGiven = $("#cashTendered").val();
+        if (cashGiven != null || cashGiven != "") {
+            if (cashGiven >= total) {
+                var change = cashGiven - total;
+                $("#receiptPage > p").append(change);
+
+
+            }
+        }
+    })
     
-    $("#cashTendered").val();
-    $("#owner").val();
-    $("#cvv").val();
-    $("#cardNumber").val();
+
 
 
 });
