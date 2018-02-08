@@ -14,7 +14,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        //$("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
     });
     $(".everydayButton").click(function () {
@@ -22,7 +22,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").show();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        //$("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
     });
     $(".dressButton").click(function () {
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").show();
         $("#jeansCollectionPage").hide();
-        //$("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
     });
     $(".jeanButton").click(function () {
@@ -38,7 +38,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").show();
-        //$("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
     });
     $(".cartButton").click(function () {
@@ -46,7 +46,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentChoice").show();
     });
@@ -55,7 +55,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentButtons").show();
     })
@@ -64,7 +64,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentButtons").hide();
         $("#cashPay").show();
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentButtons").hide();
         $("#cashPay").hide();
@@ -86,7 +86,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").show();
         $("#paymentButtons").hide();
         $("#cashPay").hide();
@@ -97,7 +97,7 @@ $(document).ready(function () {
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
-        $("#cart").hide();
+        $("#cartPage").hide();
         $("#receiptPage").show();
         $("#paymentButtons").hide();
         $("#cashPay").hide();
