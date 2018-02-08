@@ -21,11 +21,7 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
-<<<<<<< HEAD
     $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event) {
-=======
-    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event){
->>>>>>> a399861451169d2b3ca17fd70b3e4f91ad045dae
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
