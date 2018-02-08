@@ -140,8 +140,9 @@ $(document).ready(function () {
         if (cashGiven != null || cashGiven != "") {
             if (cashGiven >= total) {
                 var change = cashGiven - total;
-                $("#receiptPage > p").append(change);
                 $("#receiptPage").show();
+                $("#receiptPage > p").append(change);
+
             }
         }
     })

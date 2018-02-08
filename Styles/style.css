@@ -276,3 +276,6 @@ hr {
 #payNow {
   width: 100%;
 }
+#receiptPage {
+  display: block;
+}
