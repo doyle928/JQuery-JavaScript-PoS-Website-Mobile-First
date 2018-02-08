@@ -211,21 +211,25 @@ texatrea:focus, input:focus, select:focus{
 }
 #paymentChoice {
   display: flex;
+  padding: 10px;
 
 }
 #cashPay {
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 }
 #ccPayButton {
   width: 100%;
 }
+
 .payment {
   display: flex;
   flex-direction: column;
 }
+
 #creditCardPay {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 #cartCounter {
   position: fixed;
@@ -265,4 +269,10 @@ hr {
   border-bottom: 1px solid rgb(230, 230, 230);
   width: 77%;
   height: 42px;
+}
+.paymentButton {
+  margin: 20px;
+}
+#payNow {
+  width: 100%;
 }

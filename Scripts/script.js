@@ -1,17 +1,14 @@
 var counter = 0;
 $(document).ready(function () {
-<<<<<<< HEAD
             $("#cashPay").hide();
         $("#creditCardPay").hide();
   for(i=0; i<12; i++) {
   $(".productCart"+ (i+1)).hide();
   }
-=======
     $("#cartCounter").hide();
     for (i = 0; i < 12; i++) {
         $(".productCart" + (i + 1)).hide();
     }
->>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
 
     $("#receiptPage").hide();
     //moblie sliding nav bar
@@ -23,11 +20,7 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
-<<<<<<< HEAD
     $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event){
-=======
-    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event) {
->>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -111,6 +104,7 @@ $(document).ready(function () {
         $("#creditCardPay").show();
         $("#paymentChoice").hide();
     })
+
 
 
     $("#ccPayButton").click(function (event) {
