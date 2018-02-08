@@ -10,7 +10,7 @@ html {
 #sideNav {
   display: none;
   background-color: white;
-  width: 200px;
+  width: 50%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -115,10 +115,7 @@ html {
   padding: 0;
   margin: 0;
 }
-
-/* need to un-comment later */
-
-#everyDayShirtsCollectionPage {
+#everyDayShirtsCollectionPage{
   display: none;
 }
 
@@ -132,6 +129,9 @@ html {
 
 #cartPage {
   display: none;
+}
+/* #receiptPage {
+    /* display: none; */
 }
 
 #paymentChoice {
@@ -317,4 +317,36 @@ hr {
   min-height: calc(100vh - 70px);
 }
 
-@media screen and (min-width: 420px) {}
+@media screen and (min-width: 420px) {
+  #sideNav {
+    width: 25%;
+  }
+  h1 {
+    font-size: 5em;
+  }
+  h6 {
+    font-size: 2em;
+  }
+  .productImage{
+    height: 175px;
+  }
+  .productDiv{
+    height: 200px;
+    width: 50%;
+    margin-top: 0%;
+  }
+  .productText{
+    margin-left: 3%;
+    margin-top: 1%;
+    height: 200px;
+    float: left;
+    width: 50%;
+  }
+  .topnav {
+    width: 50%;
+  }
+  .productBuyButton, .productRemoveButton {
+    float: right;
+    margin-top: 5%;
+  }
+}
