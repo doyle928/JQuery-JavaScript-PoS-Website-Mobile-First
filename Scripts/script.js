@@ -1,13 +1,14 @@
 var counter = 0;
+$("#receiptPage").hide();
 $(document).ready(function () {
-        $("#cashPay").hide();
+            $("#cashPay").hide();
         $("#creditCardPay").hide();
         $("#cartCounter").hide();
-        $("#cartCounter").hide();
-        for (i = 0; i < 12; i++) {
-            $(".productCart" + (i + 1)).hide();
-            $(".productReceipt" + (i + 1)).hide();
-        }
+    $("#cartCounter").hide();
+    for (i = 0; i < 12; i++) {
+        $(".productCart" + (i + 1)).hide();
+        $(".productReceipt" + (i + 1)).hide();
+    }
 
     $("#receiptPage").hide();
     //moblie sliding nav bar
@@ -30,6 +31,7 @@ $(document).ready(function () {
         $(".cartPayIcon").text("shopping_cart");
         $("#cashPay").hide();
         $("#creditCardPay").hide();
+        $(".footer").show();
         var which = "";
         which = $(this).attr("class").split(' ').pop();
         if (which == "homeButton") {
@@ -44,7 +46,6 @@ $(document).ready(function () {
             $("#cartPage").show();
             $(".cartPayIcon").empty();
             $(".cartPayIcon").text("payment");
-            $(".footer").hide();
         } else if(which == "payment"){
             $("#paymentButtons").show();
         }
@@ -170,7 +171,6 @@ $(document).ready(function () {
     $(".productRemoveButton").click(function () {
         var productId = $(this).attr("data-cart-id");
         $(".productCart" + productId).hide();
-        $(".productReceipt" + productId).hide();
         counter--;
         $("#cartCounter > p").html(counter);
         if(counter <= 0){
