@@ -1,79 +1,124 @@
-#sidenav{
-  margin-bottom: 10%;
-}
-html{
+html {
   font-family: 'Raleway', sans-serif;
 }
+
 #logo {
   color: #666666;
   font-size: 25px;
 }
+
 #sideNav {
   display: none;
-  background-color: lightgrey;
+  background-color: white;
   width: 200px;
+  height: 100%;
   position: absolute;
-  top: 3;
-  left: 3;
+  top: 0;
+  left: 0;
   z-index: 10;
-  border-radius: 3%;
+  border-right: 1px solid lightgray;
 }
+
+#dropdown {
+  padding: 0;
+  margin: 0;
+}
+
 .listitem {
   text-decoration: none;
   list-style: none;
-  padding: 10px 0px;
+  padding: 5px 5px;
   font-weight: bold;
 }
-.listitem a{
-  padding:0;
-  margin:0;
-  text-decoration: none;
-  color: black;
+
+.sideHome,
+.sideEveryday,
+.sideDress,
+.sideJean,
+.sideCart {
+  background: lightgray;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  margin: 0;
 }
+
+.signIn {
+  font-size: .9em;
+  font-weight: bold;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.liFluff {
+  font-size: .9em;
+  border-bottom: 1px solid lightgray;
+}
+.liIcon {
+  margin-top: 13px;
+}
+.signIn p {
+  padding-left: 5px;
+}
+
 .collectionDiv {
-    position: relative;
-    text-align: center;
-    color: white;
+  position: relative;
+  text-align: center;
+  color: white;
 }
-.collectionImage{
+
+.collectionImage {
   width: 98%;
   height: auto;
   margin-top: 3%;
 }
+
 .collectionText {
   position: absolute;
   top: 8px;
   right: 16px;
   left: 16px;
-  text-shadow: -1px 0 rgba(0,0,0,.5), 0 1px rgba(0,0,0,.5), 1px 0 rgba(0,0,0,.5), 0 -1px rgba(0,0,0,.5);
+  text-shadow: -1px 0 rgba(0, 0, 0, .5), 0 1px rgba(0, 0, 0, .5), 1px 0 rgba(0, 0, 0, .5), 0 -1px rgba(0, 0, 0, .5);
 }
+
 .topnav {
   display: flex;
   justify-content: space-between;
 }
-.topnav i, .topnav p {
-    display: block;
-    padding: 0;
-    margin: 0;
+
+.topnav i,
+.topnav p {
+  display: block;
+  padding: 0;
+  margin: 0;
 }
-#everyDayShirtsCollectionPage{
+
+#everyDayShirtsCollectionPage {
   display: none;
 }
-#dressShirtsCollectionPage{
+
+#dressShirtsCollectionPage {
   display: none;
 }
-#jeansCollectionPage{
+
+#jeansCollectionPage {
   display: none;
 }
+
 #paymentChoice {
   display: none;
 }
+
 #cashPay {
   display: none;
 }
+
 #creditCardPay {
   display: none;
 }
+
 #receiptPage {
   display: none;
 }

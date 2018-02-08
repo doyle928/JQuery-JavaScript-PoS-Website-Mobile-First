@@ -18,11 +18,16 @@
 <body>
     <div id="sideNav">
         <ul id="dropdown">
-            <li class="listitem homeButton">Home</li>
-            <li class="listitem everydayButton">Everyday Shirts</li>
-            <li class="listitem dressButton">Dress Shirts</li>
-            <li class="listitem jeanButton">Jeans</li>
-            <li class="listitem cartButton">Cart</li>
+            <li class="listitem signIn"><i class="material-icons">account_circle</i><p>Hello, Sign In</p></li>
+            <li class="listitem homeButton sideHome"><p>HOME</p><i class="material-icons liIcon">navigate_next</i></li>
+            <li class="listitem everydayButton sideEveryday"><p>EVERDAY SHIRTS</p><i class="material-icons liIcon">navigate_next</i></li>
+            <li class="listitem dressButton sideDress"><p>DRESS SHIRTS</p><i class="material-icons liIcon">navigate_next</i></li>
+            <li class="listitem jeanButton sideJean"><p>JEANS</p><i class="material-icons liIcon">navigate_next</i></li>
+            <li class="listitem cartButton sideCart"><p>CART</p><i class="material-icons cartButton liIcon">shopping_cart</i></li>
+            <li class="listitem liFluff">TRACK ORDER</li>
+            <li class="listitem liFluff">SALE</li>
+            <li class="listitem liFluff">HELP</li>
+            <li class="listitem liFluff">FIND A STORE</li>
         </ul>
     </div>
     <div class="topnav">
@@ -71,49 +76,49 @@
     <div class="payment" id="cashPay">
     </div>
     <div class="payment" id="creditCardPay">
-        <form>
-            <div class="cc owner">
-                <label for="owner">Owner</label>
-                <input type="text" class="form-input " id="owner">
-            </div>
-            <div class="cc CVV">
-                <label for="cvv">CVV</label>
-                <input type="text" class="form-input" id="cvv">
-            </div>
-            <div class="cc" id="card-number-field">
-                <label for="cardNumber">Card Number</label>
-                <input type="text" class="cc" id="cardNumber">
-            </div>
-            <div class="cc" id="expiration-date">
-                <label>Expiration Date</label>
-                <select>
-                    <option value="01">January</option>
-                    <option value="02">February </option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <select>
-                    <option value="16"> 2018</option>
-                    <option value="17"> 2019</option>
-                    <option value="18"> 2020</option>
-                    <option value="19"> 2021</option>
-                    <option value="20"> 2022</option>
-                    <option value="21"> 2023</option>
-                </select>
-            </div>
-            <div class="cc" id="pay-now">
-                <button type="submit" id="payButton">Pay Now</button>
-            </div>
-
-        </form>
+            <form>
+                    <div class="cc owner">
+                        <label for="owner">Owner</label>
+                        <input type="text" class="form-input " id="owner">
+                    </div>
+                    <div class="cc CVV">
+                        <label for="cvv">CVV</label>
+                        <input type="text" class="form-input" id="cvv">
+                    </div>
+                    <div class="cc" id="card-number-field">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" class="cc" id="cardNumber">
+                    </div>
+                    <div class="cc" id="expiration-date">
+                        <label>Expiration Date</label>
+                        <select>
+                            <option value="01">January</option>
+                            <option value="02">February </option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                        <select>
+                            <option value="16"> 2018</option>
+                            <option value="17"> 2019</option>
+                            <option value="18"> 2020</option>
+                            <option value="19"> 2021</option>
+                            <option value="20"> 2022</option>
+                            <option value="21"> 2023</option>
+                        </select>
+                    </div>
+                    <div class="cc" id="pay-now">
+                        <button type="submit" id="payButton">Pay Now</button>
+                    </div>
+        
+                </form>
     </div>
     <div class="payment" id="receiptPage">
     </div>
