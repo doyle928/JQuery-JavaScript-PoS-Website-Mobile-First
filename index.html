@@ -39,7 +39,7 @@
             </li>
             <li class="listitem sideCart cartButton">
                 <p>CART</p>
-                <i class="material-icons cartButton liIcon">shopping_cart</i>
+                <i class="material-icons paymentPage cartButton liIcon">shopping_cart</i>
             </li>
             <li class="listitem liFluff">TRACK ORDER</li>
             <li class="listitem liFluff">SALE</li>
@@ -329,12 +329,13 @@
             </div>
             <hr class="productCart12">
         </div>
+        <button type="button" class="paying" id="payNow">Pay Now</button>
     </div>
-    <!-- replaced these with payment icon in nav
-    <div class="payment" id="paymentChoice">
+    <!-- replaced these with payment icon in nav -->
+    <div class="payment" id="paymentChoice" style="display: none;">
         <button type="button" class="paymentButton" id="cashButton">Cash</button>
         <button type="button" class="paymentButton" id="creditCardButton">Credit Card</button>
-    </div> -->
+    </div>
 
     <!-- <<<<<<<<<<<<<< CASH PAY >>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="payment" id="cashPay">
@@ -368,7 +369,7 @@
                 <input type="text" class="form-input" id="cardNumber">
             </div>
             <div class="form-input" id="expiration-date">
-                <label>Expiration Date</label>
+                <label id="expiry">Expiration Date</label>
                 <select id="month">
                     <option value="01">January</option>
                     <option value="02">February </option>

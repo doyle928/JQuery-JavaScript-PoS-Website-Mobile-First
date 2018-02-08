@@ -1,4 +1,6 @@
 $(document).ready(function () {
+            $("#cashPay").hide();
+        $("#creditCardPay").hide();
   for(i=0; i<12; i++) {
   $(".productCart"+ (i+1)).hide();
   }
@@ -13,15 +15,17 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
-    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event){
+    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event){
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
         $("#cartPage").hide();
-        $("#paymentButtons").hide();
+        $("#paymentChoice").hide();
         $(".cartPayIcon").empty();
         $(".cartPayIcon").text("shopping_cart");
+        $("#cashPay").hide();
+        $("#creditCardPay").hide();
         var which = "";
         which = $(this).attr("class").split(' ').pop();
         if(which == "homeButton"){
@@ -36,8 +40,6 @@ $(document).ready(function () {
             $("#cartPage").show();
             $(".cartPayIcon").empty();
             $(".cartPayIcon").text("payment");
-        } else if(which == "payment"){
-            $("#paymentButtons").show();
         }
     });
 
@@ -56,6 +58,46 @@ $(document).ready(function () {
         return total;
     }
     var total =  salesTax(subTotal);
+    $("#payNow").click(function(){
+        $("#main").hide();
+        $("#everyDayShirtsCollectionPage").hide();
+        $("#dressShirtsCollectionPage").hide();
+        $("#jeansCollectionPage").hide();
+        $("#cartPage").hide();
+        $("#paymentButtons").hide();
+        $(".cartPayIcon").empty();
+        $(".cartPayIcon").text("shopping_cart");
+        $("#cashPay").hide();
+        $("#creditCardPay").hide();
+        $("#paymentChoice").show();
+    })
+    $("#cashButton").click(function(){
+        $("#main").hide();
+        $("#everyDayShirtsCollectionPage").hide();
+        $("#dressShirtsCollectionPage").hide();
+        $("#jeansCollectionPage").hide();
+        $("#cartPage").hide();
+        $("#paymentButtons").hide();
+        $(".cartPayIcon").empty();
+        $(".cartPayIcon").text("shopping_cart");
+        $("#cashPay").show();
+        $("#creditCardPay").hide();
+        $("#paymentChoice").hide();
+    })
+    $("#creditCardButton").click(function(){
+        $("#main").hide();
+        $("#everyDayShirtsCollectionPage").hide();
+        $("#dressShirtsCollectionPage").hide();
+        $("#jeansCollectionPage").hide();
+        $("#cartPage").hide();
+        $("#paymentButtons").hide();
+        $(".cartPayIcon").empty();
+        $(".cartPayIcon").text("shopping_cart");
+        $("#cashPay").hide();
+        $("#creditCardPay").show();
+        $("#paymentChoice").hide();
+    })
+    
 
     $("#ccPayButton").click(function (event) {
         event.preventDefault();
