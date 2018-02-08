@@ -1,4 +1,5 @@
 var counter = 0;
+var total = 0;
 $("#receiptPage").hide();
 $(document).ready(function () {
             $("#cashPay").hide();
@@ -165,7 +166,7 @@ $(document).ready(function () {
         }else {
             $("#cartCounter > p").css({"font-size": "10px"});
         }
-        console.log(counter);
+        
     });
 
     // remove products from cart
