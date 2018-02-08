@@ -126,13 +126,13 @@ html {
     display: none;
 }
 
-#paymentChoice {
+/* #paymentChoice {
   display: none;
-}
+} */
 
-#cashPay {
+/* #cashPay {
   display: none;
-}
+} */
 
 .productDiv{
   display: inline-block;
@@ -175,20 +175,30 @@ button{
   float: right;
   margin-top: -7%;
 }
+#cvv,
+#owner,
+#cardNumber,
+.form-input,
+input {
+  border: none;
+  border-bottom: 1px solid grey;
 
-#creditCardPay {
-  display: none;
+}
+select {
+  font-size: 13px;
+  font-family: "Raleway", sans-serif;
+}
+texatrea:focus, input:focus, select:focus{
+  outline: none;
 }
 
 #receiptPage {
   display: none;
 }
-#cashPay {
+
+/* .paymentButtons {
   display: none;
-}
-.paymentButtons {
-  display: none;
-}
+} */
 #main,
 #everyDayShirtsCollectionPage,
 #dressShirtsCollectionPage,
@@ -198,4 +208,21 @@ button{
 #cashPay
  {
   margin-top: 40px;
+}
+
+/* #cashPay {
+  display: none;
+
+} */
+.form-input {
+  border-bottom: 1px solid black;
+  border-style: none;
+}
+#paymentChoice {
+  display: flex;
+
+}
+#cashPay {
+  display: flex;
+  flex-direction: column;
 }

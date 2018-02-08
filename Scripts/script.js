@@ -49,8 +49,9 @@ $(document).ready(function () {
         $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentChoice").show();
+        $("#creditCardPay").hide();
     });
-    $(".payment").click(function () {
+    $("#paymentChoice").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -58,6 +59,7 @@ $(document).ready(function () {
         $("#cartPage").hide();
         $("#receiptPage").hide();
         $("#paymentButtons").show();
+        $("#creditCardPay").hide();
     })
     $("#cashButton").click(function () {
         $("#main").hide();
