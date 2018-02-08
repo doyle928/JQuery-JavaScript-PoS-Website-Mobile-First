@@ -347,6 +347,17 @@ hr {
   }
   .productBuyButton, .productRemoveButton {
     float: right;
-    margin-top: 5%;
+    margin-top: 2%;
+  }
+  #emailFooter input {
+    width: 20%;
+  }
+  #emailButton {
+    float: right;
+    margin-right: 64.35%;
+  }
+  hr {
+    width: 50%;
+    float: left;
   }
 }
