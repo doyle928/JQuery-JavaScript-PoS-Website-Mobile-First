@@ -12,11 +12,11 @@ html{
   display: none;
   background-color: lightgrey;
   width: 200px;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 3;
+  left: 3;
   z-index: 10;
+  border-radius: 3%;
 }
 .listitem {
   text-decoration: none;
