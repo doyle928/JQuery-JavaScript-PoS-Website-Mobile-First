@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("#receiptPage").hide();
 
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
@@ -9,92 +10,29 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
-    $(".homeButton").click(function () {
-        $("#main").show();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-    });
-    $(".everydayButton").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").show();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-    });
-    $(".dressButton").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").show();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-    });
-    $(".jeanButton").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").show();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-    });
-    $(".cartButton").click(function () {
+    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event){
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
         $("#cartPage").hide();
-        $("#receiptPage").hide();
-        $("#paymentChoice").show();
-    });
-    $(".payment").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-        $("#paymentButtons").show();
-    })
-    $("#cashButton").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
         $("#paymentButtons").hide();
-        $("#cashPay").show();
-        $("#paymentChoice").show();
-    })
-    $("#creditCardButton").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").hide();
-        $("#paymentButtons").hide();
-        $("#cashPay").hide();
-        $("#creditCardPay").show();
-        $("#paymentChoice").show();
-
-    })
-    $("#cashPaySubmit").click(function () {
-        $("#main").hide();
-        $("#everyDayShirtsCollectionPage").hide();
-        $("#dressShirtsCollectionPage").hide();
-        $("#jeansCollectionPage").hide();
-        $("#cartPage").hide();
-        $("#receiptPage").show();
-        $("#paymentButtons").hide();
-        $("#cashPay").hide();
-        $("#creditCardPay").hide();
-        $("#paymentChoice").hide();
-    })
+        var which = "";
+        which = $(this).attr("class").split(' ').pop();
+        if(which == "homeButton"){
+            $("#main").show();
+        } else if(which == "everydayButton"){
+            $("#everyDayShirtsCollectionPage").show();
+        } else if(which == "dressButton"){
+            $("#dressShirtsCollectionPage").show();
+        } else if(which == "jeanButton"){
+            $("#jeansCollectionPage").show();
+        } else if(which == "cartButton"){
+            $("#cartPage").show();
+        } else if(which == "payment"){
+            $("#paymentButtons").show();
+        }
+    });
 
 
     //everyday add to cart buttons
