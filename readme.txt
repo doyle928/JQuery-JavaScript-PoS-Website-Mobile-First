@@ -8,3 +8,6 @@ content image 90% (330px) x auto (170px)
 h1 16px
 h2 14px
 p 12px
+nav = 4%
+margins 3 * 3% = 9%
+productDiv 100%-4%-9%=21.75% * 640 140px
