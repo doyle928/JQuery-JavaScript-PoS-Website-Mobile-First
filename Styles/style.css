@@ -139,7 +139,6 @@ html {
   width: 98%;
   height: 150px;
   margin-top: 3%;
-  background-color: #D6D5D5;
 }
 
 .productText{
@@ -170,6 +169,7 @@ button{
   color: white;
   float: left;
   margin-right: 1%;
+  border: none;
 }
 .productBuyButton, .productRemoveButton {
   float: right;
