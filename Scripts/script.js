@@ -33,6 +33,7 @@ $(document).ready(function () {
         $("#cashPay").hide();
         $("#creditCardPay").hide();
         $(".footer").show();
+        $("#receiptPage").hide();
         var which = "";
         which = $(this).attr("class").split(' ').pop();
         if (which == "homeButton") {
@@ -52,13 +53,6 @@ $(document).ready(function () {
         }
     });
     //everyday add to cart buttons
-
-    var subTotal = 40; //$().val();
-    var owner = $("#owner").val();
-    var ccNumber = $("#cardNumber").val();
-    var expireMonth = $("#month").val();
-    var expireYear = $("#year").val();
-    var cvv = $("#cvv").val();
 
     function salesTax(total) {
         total = subTotal * 1.06;
@@ -107,8 +101,13 @@ $(document).ready(function () {
     })
 
 
-
+    var subTotal = 40; //$().val();
     $("#ccPayButton").click(function (event) {
+        var owner = $("#owner").val();
+        var ccNumber = $("#cardNumber").val();
+        var expireMonth = $("#month").val();
+        var expireYear = $("#year").val();
+        var cvv = $("#cvv").val();
         event.preventDefault();
         if (owner != null || owner != "") {
             if (ccNumber != null || ccNumber != "") {

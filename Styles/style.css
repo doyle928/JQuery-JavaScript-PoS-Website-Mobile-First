@@ -16,14 +16,13 @@ html {
   top: 0;
   left: 0;
   z-index: 10;
-  box-shadow: 200px 0px 100px rgba(0,0,0,.2);
+  box-shadow: 200px 0px 100px rgba(0, 0, 0, .2);
 }
 
 #dropdown {
   padding: 0;
   margin: 0;
 }
-
 
 .listitem {
   text-decoration: none;
@@ -56,19 +55,24 @@ html {
   align-items: center;
   line-height: .3em;
 }
+
 .sideCart .cartButton {
   font-size: 20px;
 }
+
 .liFluff {
   font-size: .8em;
   border-bottom: 1px solid rgb(230, 230, 230);
 }
+
 .liIcon {
   /* margin-top: 13px; */
 }
+
 .signIn p {
   padding-left: 5px;
 }
+
 .collectionDiv {
   position: relative;
   text-align: center;
@@ -87,8 +91,9 @@ html {
   bottom: 10%;
   right: 5%;
   left: 5%;
-  text-shadow: -1px 0 3px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.3), 1px 0 3px rgba(0,0,0,.3), 0 -1px 3px rgba(0,0,0,.3);
+  text-shadow: -1px 0 3px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .3), 1px 0 3px rgba(0, 0, 0, .3), 0 -1px 3px rgba(0, 0, 0, .3);
 }
+
 #sideNav {
   display: none;
 }
@@ -110,46 +115,51 @@ html {
   padding: 0;
   margin: 0;
 }
+
 /* need to un-comment later */
-#everyDayShirtsCollectionPage{
+
+#everyDayShirtsCollectionPage {
   display: none;
 }
 
-#dressShirtsCollectionPage{
+#dressShirtsCollectionPage {
   display: none;
 }
 
 #jeansCollectionPage {
   display: none;
 }
+
 #cartPage {
-    display: none;
+  display: none;
 }
 
 #paymentChoice {
   display: none;
 }
 
-.productDiv{
+.productDiv {
   display: inline-block;
   width: 98%;
   height: 150px;
   margin-top: 3%;
 }
 
-.productText{
+.productText {
   margin-left: 3%;
   height: 100px;
   float: left;
   width: 60%;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   margin-top: 3%;
   margin-bottom: 5%;
 }
 
-.productImage{
+.productImage {
   width: auto;
   height: 130px;
   margin-top: 3%;
@@ -158,7 +168,7 @@ h2, h3, h4 {
   margin-left: 3%;
 }
 
-button{
+button {
   min-width: 45px;
   height: 45px;
   background-color: #666666;
@@ -167,7 +177,9 @@ button{
   margin-right: 1%;
   border: none;
 }
-.productBuyButton, .productRemoveButton {
+
+.productBuyButton,
+.productRemoveButton {
   float: right;
   margin-top: -12%;
 }
@@ -181,18 +193,18 @@ input {
   border-bottom: 1px solid grey;
   margin-bottom: 10px;
   margin-top: 3px;
-
-
 }
 
 select {
   font-size: 13px;
   font-family: "Raleway", sans-serif;
 }
-texatrea:focus, input:focus, select:focus{
+
+texatrea:focus,
+input:focus,
+select:focus {
   outline: none;
 }
-
 
 #main,
 #everyDayShirtsCollectionPage,
@@ -200,8 +212,7 @@ texatrea:focus, input:focus, select:focus{
 #jeansCollectionPage,
 #paymentChoice,
 #cartPage,
-#cashPay
- {
+#cashPay {
   margin-top: 40px;
 }
 
@@ -209,16 +220,18 @@ texatrea:focus, input:focus, select:focus{
   border-bottom: 1px solid black;
   border-style: none;
 }
+
 #paymentChoice {
   display: flex;
   padding: 10px;
-
 }
+
 #cashPay {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
 }
+
 #ccPayButton {
   width: 100%;
 }
@@ -231,6 +244,7 @@ texatrea:focus, input:focus, select:focus{
 #creditCardPay {
   margin-top: 60px;
 }
+
 #cartCounter {
   position: fixed;
   right: 7px;
@@ -241,16 +255,24 @@ texatrea:focus, input:focus, select:focus{
   background-color: blueviolet;
   font-weight: bold;
 }
+
 #cartCounter p {
   font-size: 10px;
   font-weight: bold;
   color: white;
   padding-left: 3px;
 }
+
+.footer {
+  position: static;
+  bottom: 0;
+}
+
 hr {
   width: 98%;
 }
-#emailFooter{
+
+#emailFooter {
   display: inline;
 }
 
@@ -262,17 +284,33 @@ hr {
 #emailHeadline {
   margin-bottom: 0px;
 }
-#emailFooter input{
+
+#emailFooter input {
   padding-left: 5px;
   font-size: .8em;
   border: none;
   border-bottom: 1px solid rgb(230, 230, 230);
-  width: 77%;
+  width: 75%;
   height: 42px;
 }
+
 .paymentButton {
   margin: 20px;
 }
+
 #payNow {
   width: 100%;
 }
+
+#main,
+#everyDayShirtsCollectionPage,
+#cashPay,
+#receiptPage,
+#creditCardPay,
+#paymentChoice,
+#jeansCollectionPage,
+#dressShirtsCollectionPage {
+  min-height: calc(100vh - 70px);
+}
+
+@media screen and (min-width: 420px) {}
