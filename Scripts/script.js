@@ -1,11 +1,19 @@
+var counter = 0;
 $(document).ready(function () {
+<<<<<<< HEAD
             $("#cashPay").hide();
         $("#creditCardPay").hide();
   for(i=0; i<12; i++) {
   $(".productCart"+ (i+1)).hide();
   }
+=======
+    $("#cartCounter").hide();
+    for (i = 0; i < 12; i++) {
+        $(".productCart" + (i + 1)).hide();
+    }
+>>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
 
-      $("#receiptPage").hide();
+    $("#receiptPage").hide();
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -15,7 +23,11 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
+<<<<<<< HEAD
     $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton").click(function (event){
+=======
+    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event) {
+>>>>>>> 7d7d3fbb6523cd5197633b0b9705dce15075c813
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -28,22 +40,23 @@ $(document).ready(function () {
         $("#creditCardPay").hide();
         var which = "";
         which = $(this).attr("class").split(' ').pop();
-        if(which == "homeButton"){
+        if (which == "homeButton") {
             $("#main").show();
-        } else if(which == "everydayButton"){
+        } else if (which == "everydayButton") {
             $("#everyDayShirtsCollectionPage").show();
-        } else if(which == "dressButton"){
+        } else if (which == "dressButton") {
             $("#dressShirtsCollectionPage").show();
-        } else if(which == "jeanButton"){
+        } else if (which == "jeanButton") {
             $("#jeansCollectionPage").show();
-        } else if(which == "cartButton"){
+        } else if (which == "cartButton") {
             $("#cartPage").show();
             $(".cartPayIcon").empty();
             $(".cartPayIcon").text("payment");
+            $(".footer").hide();
+        } else if(which == "payment"){
+            $("#paymentButtons").show();
         }
     });
-
-
     //everyday add to cart buttons
 
     var subTotal = 40; //$().val();
@@ -52,6 +65,7 @@ $(document).ready(function () {
     var expireMonth = $("#month").val();
     var expireYear = $("#year").val();
     var cvv = $("#cvv").val();
+
     function salesTax(total) {
         total = subTotal * 1.06;
         console.log(total);
@@ -97,7 +111,7 @@ $(document).ready(function () {
         $("#creditCardPay").show();
         $("#paymentChoice").hide();
     })
-    
+
 
     $("#ccPayButton").click(function (event) {
         event.preventDefault();
@@ -133,7 +147,7 @@ $(document).ready(function () {
         }
     })
 
-    $("#cashPaySubmit").click(function(){
+    $("#cashPaySubmit").click(function () {
         var cashGiven = $("#cashTendered").val();
         if (cashGiven != null || cashGiven != "") {
             if (cashGiven >= total) {
@@ -151,14 +165,34 @@ $(document).ready(function () {
 
 
     // add products to cart
-    $(".productBuyButton").click(function() {
-      var productId = $(this).attr("data-product-id");
-      $(".productCart" + productId).show();
+    $(".productBuyButton").click(function () {
+        var productId = $(this).attr("data-product-id");
+        $(".productCart" + productId).show();
+        counter++;
+        $("#cartCounter").show();
+        $("#cartCounter > p").html(counter);
+        if(counter >= 10){
+            $("#cartCounter > p").css({"font-size": "8px"});
+        }else {
+            $("#cartCounter > p").css({"font-size": "10px"});
+        }
+        console.log(counter);
     });
 
     // remove products from cart
-    $(".productRemoveButton").click(function() {
-      $(this).parent().parent().hide();
+    $(".productRemoveButton").click(function () {
+        var productId = $(this).attr("data-cart-id");
+        $(".productCart" + productId).hide();
+        counter--;
+        $("#cartCounter > p").html(counter);
+        if(counter <= 0){
+            counter = 0;
+            $("#cartCounter").hide();
+        }
+        if(counter >= 10){
+            $("#cartCounter > p").css({"font-size":"8px"});
+        }else {
+            $("#cartCounter > p").css({"font-size":"10px"});
+        }
     });
-
 });
