@@ -2,9 +2,9 @@ var counter = 0;
 var total = 0;
 $("#receiptPage").hide();
 $(document).ready(function () {
-            $("#cashPay").hide();
-        $("#creditCardPay").hide();
-        $("#cartCounter").hide();
+    $("#cashPay").hide();
+    $("#creditCardPay").hide();
+    $("#cartCounter").hide();
     $("#cartCounter").hide();
     for (i = 0; i < 12; i++) {
         $(".productCart" + (i + 1)).hide();
@@ -12,7 +12,7 @@ $(document).ready(function () {
     }
 
     // $("#receiptPage").hide();
-    
+
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -49,7 +49,7 @@ $(document).ready(function () {
             $("#cartPage").show();
             $(".cartPayIcon").empty();
             $(".cartPayIcon").text("payment");
-        } else if(which == "payment"){
+        } else if (which == "payment") {
             $("#paymentButtons").show();
         }
     });
@@ -60,8 +60,8 @@ $(document).ready(function () {
         console.log(total);
         return total;
     }
-    var total =  salesTax(subTotal);
-    $("#payNow").click(function(){
+    var total = salesTax(subTotal);
+    $("#payNow").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $("#creditCardPay").hide();
         $("#paymentChoice").show();
     })
-    $("#cashButton").click(function(){
+    $("#cashButton").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -87,7 +87,7 @@ $(document).ready(function () {
         $("#creditCardPay").hide();
         $("#paymentChoice").hide();
     })
-    $("#creditCardButton").click(function(){
+    $("#creditCardButton").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -142,8 +142,9 @@ $(document).ready(function () {
         if (cashGiven != null || cashGiven != "") {
             if (cashGiven >= total) {
                 var change = cashGiven - total;
-                $("#receiptPage > p").append(change);
                 $("#receiptPage").show();
+                $("#receiptPage > p").append(change);
+
             }
         }
     })
@@ -161,10 +162,10 @@ $(document).ready(function () {
         counter++;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
-        if(counter >= 10){
-            $("#cartCounter > p").css({"font-size": "8px"});
-        }else {
-            $("#cartCounter > p").css({"font-size": "10px"});
+        if (counter >= 10) {
+            $("#cartCounter > p").css({ "font-size": "8px" });
+        } else {
+            $("#cartCounter > p").css({ "font-size": "10px" });
         }
         
     });
@@ -175,14 +176,14 @@ $(document).ready(function () {
         $(".productCart" + productId).hide();
         counter--;
         $("#cartCounter > p").html(counter);
-        if(counter <= 0){
+        if (counter <= 0) {
             counter = 0;
             $("#cartCounter").hide();
         }
-        if(counter >= 10){
-            $("#cartCounter > p").css({"font-size":"8px"});
-        }else {
-            $("#cartCounter > p").css({"font-size":"10px"});
+        if (counter >= 10) {
+            $("#cartCounter > p").css({ "font-size": "8px" });
+        } else {
+            $("#cartCounter > p").css({ "font-size": "10px" });
         }
     });
 });

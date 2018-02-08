@@ -301,6 +301,10 @@ hr {
 #payNow {
   width: 100%;
 }
+#receiptPage {
+  display: block;
+  margin-top: 60px;
+}
 
 #main,
 #everyDayShirtsCollectionPage,
