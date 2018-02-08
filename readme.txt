@@ -1,3 +1,12 @@
+https://github.com/doyle928/Midterm
+
+Can I safely delete the Dress, Everyday and Jeans folders/html files
+and stylestyles.css file?
+I need to resize images, work on mobile css and then big browser css.
+Matthew would you please create a github link for the project (Settings/GitHub pages),
+so we can also see our progress online?
+trader
+
 width x height in text
 mobile page 360px x 640px
 nav 360px x 40px
