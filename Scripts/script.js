@@ -92,7 +92,7 @@ $(document).ready(function () {
         $("#cashPay").hide();
         $("#creditCardPay").hide();
     })
-    $("#ccPaySubmit".click(function () {
+    $("#ccPaySubmit").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
@@ -106,5 +106,10 @@ $(document).ready(function () {
 
     //everyday add to cart buttons
     
+    $("#cashTendered").val();
+    $("#owner").val();
+    $("#cvv").val();
+    $("#cardNumber").val();
 
-)});
+
+});
