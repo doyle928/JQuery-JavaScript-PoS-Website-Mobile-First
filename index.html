@@ -176,11 +176,17 @@
       </div>
     </div>
 
-    <div class="payment" id="paymentChoice">
-        <button type="button" class="paymentButton" id="cashButton">Cash</button>
-        <button type="button" class="paymentButton" id="creditCardButton">Credit Card</button>
+    <button type="button" class="paymentButtons" id="paymentChoice">Pay Now</button>
+        <button type="button" class="paymentButtons" id="cashButton">Cash</button>
+        <button type="button" class="paymentButtons" id="creditCardButton">Credit Card</button>
     </div>
     <div class="payment" id="cashPay">
+        <label for="cashTendered">Cash Tendered</label>
+        <input type="number" id="cashTendered">
+        <label for "cashSalesTax">Sales Tax</label>
+        <label for "cashPayTotal">Total</label>
+        <label for "cashPayBack">Cash Back</label>
+        <button type="button" id="cashPaySubmit">Pay Now</button>
     </div>
     <div class="payment" id="creditCardPay">
             <form>
@@ -222,7 +228,7 @@
                         </select>
                     </div>
                     <div class="cc" id="pay-now">
-                        <button type="submit" id="payButton">Pay Now</button>
+                        <button type="submit" id="ccPayButton">Pay Now</button>
                     </div>
 
                 </form>

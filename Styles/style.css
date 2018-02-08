@@ -101,23 +101,23 @@ html {
 
 /* need to un-comment later */
 #everyDayShirtsCollectionPage{
-  /* display: none; */
+  display: none;
 }
 
 #dressShirtsCollectionPage{
-  /* display: none; */
+  display: none;
 }
 
 #jeansCollectionPage {
-  /* display: none; */
+  display: none;
 }
 
 #paymentChoice {
-  /* display: none; */
+  display: none;
 }
 
 #cashPay {
-  /* display: none; */
+  display: none;
 }
 
 .productDiv{
@@ -167,5 +167,11 @@ button{
 }
 
 #receiptPage {
+  display: none;
+}
+#cashPay {
+  display: none;
+}
+.paymentButtons {
   display: none;
 }
