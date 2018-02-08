@@ -173,7 +173,7 @@ button{
 }
 .productBuyButton, .productRemoveButton {
   float: right;
-  margin-top: -15%;
+  margin-top: -12%;
 }
 
 #creditCardPay {
@@ -198,4 +198,26 @@ button{
 #cashPay
  {
   margin-top: 40px;
+}
+input{
+  font-size: .8em;
+  border: none;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  width: 78%;
+  height: 43px;
+}
+hr {
+  width: 98%;
+}
+#emailFooter{
+  display: inline;
+}
+
+#emailButton {
+  float: right;
+  margin-right: 3%;
+}
+
+#emailHeadline {
+  margin-bottom: 0px;
 }
