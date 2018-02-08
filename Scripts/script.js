@@ -1,8 +1,13 @@
 $(document).ready(function () {
+<<<<<<< HEAD
   // hide products from cart to start
   for(i=0; i<12; i++) {
   $("#productCart"+ (i+1)).hide();
   }
+=======
+    $("#receiptPage").hide();
+
+>>>>>>> 8963f6c4f863cc148ed5fed6f7d69caac2a4f5ae
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -12,6 +17,7 @@ $(document).ready(function () {
     });
 
     //nav buttons, just add the class name to the html element
+<<<<<<< HEAD
     $(".homeButton").click(function () {
         $("#main").show();
         $("#everyDayShirtsCollectionPage").hide();
@@ -66,13 +72,16 @@ $(document).ready(function () {
         $("#paymentButtons").show();
     })
     $("#cashButton").click(function () {
+=======
+    $(".homeButton, .everydayButton, .dressButton, .jeanButton, .cartButton, .payment").click(function (event){
+>>>>>>> 8963f6c4f863cc148ed5fed6f7d69caac2a4f5ae
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
         $("#dressShirtsCollectionPage").hide();
         $("#jeansCollectionPage").hide();
         $("#cartPage").hide();
-        $("#receiptPage").hide();
         $("#paymentButtons").hide();
+<<<<<<< HEAD
         $("#cashPay").show();
         $("#paymentChoice").show();
     })
@@ -102,6 +111,24 @@ $(document).ready(function () {
         $("#creditCardPay").hide();
         $("#paymentChoice").hide();
     })
+=======
+        var which = "";
+        which = $(this).attr("class").split(' ').pop();
+        if(which == "homeButton"){
+            $("#main").show();
+        } else if(which == "everydayButton"){
+            $("#everyDayShirtsCollectionPage").show();
+        } else if(which == "dressButton"){
+            $("#dressShirtsCollectionPage").show();
+        } else if(which == "jeanButton"){
+            $("#jeansCollectionPage").show();
+        } else if(which == "cartButton"){
+            $("#cartPage").show();
+        } else if(which == "payment"){
+            $("#paymentButtons").show();
+        }
+    });
+>>>>>>> 8963f6c4f863cc148ed5fed6f7d69caac2a4f5ae
 
 
     //everyday add to cart buttons
