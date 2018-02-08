@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    $("#receiptPage").hide();
+  for(i=0; i<12; i++) {
+  $(".productCart"+ (i+1)).hide();
+  }
 
+      $("#receiptPage").hide();
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);
@@ -17,6 +20,8 @@ $(document).ready(function () {
         $("#jeansCollectionPage").hide();
         $("#cartPage").hide();
         $("#paymentButtons").hide();
+        $(".cartPayIcon").empty();
+        $(".cartPayIcon").text("shopping_cart");
         var which = "";
         which = $(this).attr("class").split(' ').pop();
         if(which == "homeButton"){
@@ -29,6 +34,8 @@ $(document).ready(function () {
             $("#jeansCollectionPage").show();
         } else if(which == "cartButton"){
             $("#cartPage").show();
+            $(".cartPayIcon").empty();
+            $(".cartPayIcon").text("payment");
         } else if(which == "payment"){
             $("#paymentButtons").show();
         }
@@ -95,8 +102,21 @@ $(document).ready(function () {
             }
         }
     })
-    
+    $("#cashTendered").val();
+    $("#owner").val();
+    $("#cvv").val();
+    $("#cardNumber").val();
 
 
+    // add products to cart
+    $(".productBuyButton").click(function() {
+      var productId = $(this).attr("data-product-id");
+      $(".productCart" + productId).show();
+    });
+
+    // remove products from cart
+    $(".productRemoveButton").click(function() {
+      $(this).parent().parent().hide();
+    });
 
 });

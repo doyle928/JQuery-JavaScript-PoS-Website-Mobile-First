@@ -139,7 +139,6 @@ html {
   width: 98%;
   height: 150px;
   margin-top: 3%;
-  background-color: #D6D5D5;
 }
 
 .productText{
@@ -149,7 +148,7 @@ html {
   width: 60%;
 }
 
-h2, h3, h4, .productText{
+h2, h3, h4 {
   margin-top: 3%;
   margin-bottom: 5%;
 }
@@ -164,16 +163,17 @@ h2, h3, h4, .productText{
 }
 
 button{
-  width: 45px;
+  min-width: 45px;
   height: 45px;
   background-color: #666666;
   color: white;
   float: left;
   margin-right: 1%;
+  border: none;
 }
-.productBuyButton {
+.productBuyButton, .productRemoveButton {
   float: right;
-  margin-top: -7%;
+  margin-top: -15%;
 }
 #cvv,
 #owner,
@@ -209,6 +209,7 @@ texatrea:focus, input:focus, select:focus{
  {
   margin-top: 40px;
 }
+<<<<<<< HEAD
 
 /* #cashPay {
   display: none;
@@ -226,3 +227,5 @@ texatrea:focus, input:focus, select:focus{
   display: flex;
   flex-direction: column;
 }
+=======
+>>>>>>> ac647cad0a533de59fe26e92140314797680366f
