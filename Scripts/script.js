@@ -38,7 +38,8 @@ $(document).ready(function () {
             $("#cartPage").show();
             $(".cartPayIcon").empty();
             $(".cartPayIcon").text("payment");
-        } else if (which == "payment") {
+            $(".footer").hide();
+        } else if(which == "payment"){
             $("#paymentButtons").show();
         }
     });
@@ -126,7 +127,8 @@ $(document).ready(function () {
 
     // remove products from cart
     $(".productRemoveButton").click(function () {
-        $(this).parent().parent().hide();
+        var productId = $(this).attr("data-cart-id");
+        $(".productCart" + productId).hide();
         counter--;
         $("#cartCounter > p").html(counter);
         if(counter <= 0){
