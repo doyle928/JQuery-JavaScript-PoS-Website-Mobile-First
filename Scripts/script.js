@@ -1,15 +1,13 @@
 var counter = 0;
 $(document).ready(function () {
-            $("#cashPay").hide();
+        $("#cashPay").hide();
         $("#creditCardPay").hide();
         $("#cartCounter").hide();
-  for(i=0; i<12; i++) {
-  $(".productCart"+ (i+1)).hide();
-  }
-    $("#cartCounter").hide();
-    for (i = 0; i < 12; i++) {
-        $(".productCart" + (i + 1)).hide();
-    }
+        $("#cartCounter").hide();
+        for (i = 0; i < 12; i++) {
+            $(".productCart" + (i + 1)).hide();
+            $(".productReceipt" + (i + 1)).hide();
+        }
 
     $("#receiptPage").hide();
     //moblie sliding nav bar
@@ -172,6 +170,7 @@ $(document).ready(function () {
     $(".productRemoveButton").click(function () {
         var productId = $(this).attr("data-cart-id");
         $(".productCart" + productId).hide();
+        $(".productReceipt" + productId).hide();
         counter--;
         $("#cartCounter > p").html(counter);
         if(counter <= 0){
