@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="Scripts/script.js"></script>
+    <script src="Scripts/jquery.maskedinput.js"></script>
 </head>
 
 <body>
@@ -339,7 +340,7 @@
         <form>
             <div class="cc owner">
                 <label for="owner">Owner</label>
-                <input type="text" class="form-input " id="owner">
+                <input type="text" class="form-input" id="owner">
             </div>
             <div class="cc CVV">
                 <label for="cvv">CVV</label>
@@ -383,6 +384,11 @@
     <!-- <<<<<<<<<<<<<< RECIEPT PAGE >>>>>>>>>>>>>>>>>>>>>>>>> -->
     <div class="payment" id="receiptPage">
     </div>
+
+    <script>
+        $("#cvv").mask("999");
+        $("#cardNumber").mask("9999-9999-9999-9999");
+    </script>
 
 </body>
 
