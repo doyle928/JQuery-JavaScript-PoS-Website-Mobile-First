@@ -101,6 +101,40 @@ $(document).ready(function () {
         $("#paymentChoice").hide();
     })
 
+    // add products to cart
+    $(".productBuyButton").click(function () {
+        var productId = $(this).attr("data-product-id");
+        $(".productCart" + productId).show();
+        $(".productReceipt" + productId).show();
+        counter++;
+        $("#cartCounter").show();
+        $("#cartCounter > p").html(counter);
+        if (counter >= 10) {
+            $("#cartCounter > p").css({ "font-size": "8px" });
+        } else {
+            $("#cartCounter > p").css({ "font-size": "10px" });
+        }
+        var addingTotal = parseInt($(".productCart" + productId).find("h3").text(), 10);
+        total += addingTotal;
+        console.log(total);
+    });
+
+    // remove products from cart
+    $(".productRemoveButton").click(function () {
+        var productId = $(this).attr("data-cart-id");
+        $(".productCart" + productId).hide();
+        counter--;
+        $("#cartCounter > p").html(counter);
+        if (counter <= 0) {
+            counter = 0;
+            $("#cartCounter").hide();
+        }
+        if (counter >= 10) {
+            $("#cartCounter > p").css({ "font-size": "8px" });
+        } else {
+            $("#cartCounter > p").css({ "font-size": "10px" });
+        }
+    });
 
     var subTotal = 40; //$().val();
     $("#ccPayButton").click(function (event) {
@@ -148,42 +182,4 @@ $(document).ready(function () {
             }
         }
     })
-    $("#cashTendered").val();
-    $("#owner").val();
-    $("#cvv").val();
-    $("#cardNumber").val();
-
-
-    // add products to cart
-    $(".productBuyButton").click(function () {
-        var productId = $(this).attr("data-product-id");
-        $(".productCart" + productId).show();
-        $(".productReceipt" + productId).show();
-        counter++;
-        $("#cartCounter").show();
-        $("#cartCounter > p").html(counter);
-        if (counter >= 10) {
-            $("#cartCounter > p").css({ "font-size": "8px" });
-        } else {
-            $("#cartCounter > p").css({ "font-size": "10px" });
-        }
-        
-    });
-
-    // remove products from cart
-    $(".productRemoveButton").click(function () {
-        var productId = $(this).attr("data-cart-id");
-        $(".productCart" + productId).hide();
-        counter--;
-        $("#cartCounter > p").html(counter);
-        if (counter <= 0) {
-            counter = 0;
-            $("#cartCounter").hide();
-        }
-        if (counter >= 10) {
-            $("#cartCounter > p").css({ "font-size": "8px" });
-        } else {
-            $("#cartCounter > p").css({ "font-size": "10px" });
-        }
-    });
 });
