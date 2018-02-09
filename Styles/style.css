@@ -65,10 +65,6 @@ html {
   border-bottom: 1px solid rgb(230, 230, 230);
 }
 
-.liIcon {
-  /* margin-top: 13px; */
-}
-
 .signIn p {
   padding-left: 5px;
 }
@@ -187,15 +183,20 @@ button {
   margin-top: -12%;
 }
 
-#cvv,
-#owner,
-#cardNumber,
-.form-input,
-input {
-  border: none;
-  border-bottom: 1px solid grey;
+#creditCardPay {
+  color: #666666;
+  text-align: center;
+}
+
+#creditCardPay h2,
+#creditCardPay h4 {
+  padding: 0;
+  margin: 5px 30px;
+}
+
+#creditCardPay h4 {
+  border-bottom: 1px solid #666666;
   margin-bottom: 10px;
-  margin-top: 3px;
 }
 
 select {
@@ -209,6 +210,63 @@ select:focus {
   outline: none;
 }
 
+.form-input {
+  border-style: none;
+  margin: 5px 0;
+  border-bottom: 1px solid #666666;
+  width: 40%;
+  float: left;
+  margin-left: 15px;
+}
+
+.owner,
+.CVV,
+#card-number-field {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.owner label,
+.CVV label,
+#card-number-field label {
+  width: 36%;
+  text-align: right;
+  float: left;
+  padding-top: 5px;
+}
+
+#cvv {
+  width: 30px;
+}
+
+#cardNumber {
+  width: 135px;
+}
+
+.select-input {
+  margin-top: 3px;
+}
+
+#expiry {
+  width: 36%;
+  text-align: right;
+  float: left;
+  margin: 0;
+}
+
+#month {
+  float: left;
+  margin-left: 15px;
+}
+
+#year {
+  float: left;
+}
+
+#ccPay {
+  margin-top: 50px;
+}
+
 #main,
 #everyDayShirtsCollectionPage,
 #dressShirtsCollectionPage,
@@ -217,11 +275,6 @@ select:focus {
 #cartPage,
 #cashPay {
   margin-top: 40px;
-}
-
-.form-input {
-  border-bottom: 1px solid black;
-  border-style: none;
 }
 
 #paymentChoice {
@@ -237,6 +290,7 @@ select:focus {
 
 #ccPayButton {
   width: 100%;
+  margin-top: 30px;
 }
 
 .payment {
@@ -297,17 +351,133 @@ hr {
   height: 42px;
 }
 
-.paymentButton {
-  margin: 20px;
-}
-
 #payNow {
   width: 100%;
+}
+
+#cashTotalBefore,
+#cashSalesTax,
+#cashPayTotal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+#cashTotalBeforeCC,
+#cashSalesTaxCC,
+#cashPayTotalCC {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.cashLabel {
+  margin-top: 20px;
+  width: 98%;
+  border: 1px solid #666666;
+  padding: 5px;
+  background-color: #666666;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#cashTendered {
+  width: 98%;
+  border: 1px solid #666666;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+#cashTotalBefore p,
+#cashSalesTax p,
+#cashPayTotal p {
+  margin: 3px 0;
+  padding: 0;
+  padding-right: 10px;
+}
+
+#cashTotalBeforeCC p,
+#cashSalesTaxCC p,
+#cashPayTotalCC p {
+  margin: 3px 0;
+  padding: 0;
+  padding-right: 10px;
+}
+
+.typeTo {
+  margin: 3px 10px !important;
+  width: 50px !important;
+}
+
+#cashPay hr {
+  width: 135px;
+  float: right;
+  margin-right: 15px;
+}
+
+#ccPay hr {
+  width: 135px;
+  margin-right: 15px;
+}
+
+.cashPaySubmit {
+  margin-top: 30px;
+}
+
+.cashFormFail,
+.cashFail {
+  text-align: center;
 }
 
 #receiptPage {
   display: block;
   margin-top: 60px;
+}
+
+#receiptPage h2 {
+  text-align: center;
+}
+
+#invoicePayment,
+#invoiceCard,
+#invoiceTotal,
+#invoiceCashPaid,
+#invoiceCashChange {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+#invoicePayment p,
+#invoiceCard p,
+#invoiceTotal p,
+#invoiceCashPaid p,
+#invoiceCashChange p {
+  margin: 5px 0;
+  padding: 0;
+  text-align: right;
+  width: 150px;
+}
+
+.invoiceWrite {
+  margin-left: 15px !important;
+  text-align: left !important;
+  width: 100px !important;
+}
+
+#payMethods{
+  display: flex;
+}
+#cashButton, #creditCardButton {
+  padding: 10px 0;
+  width: 50%;
 }
 
 #main,
@@ -373,7 +543,7 @@ hr {
   .homeButton,
   .everydayButton,
   .dressButton,
-  .sideNavButton{
+  .sideNavButton {
     cursor: pointer;
   }
 }
