@@ -1,4 +1,5 @@
 var counter = 0;
+var subTotal = 0;
 var total = 0;
 $("#receiptPage").hide();
 $(document).ready(function () {
@@ -55,12 +56,6 @@ $(document).ready(function () {
     });
     //everyday add to cart buttons
 
-    function salesTax(total) {
-        total = subTotal * 1.06;
-        console.log(total);
-        return total;
-    }
-    var total = salesTax(subTotal);
     $("#payNow").click(function () {
         $("#main").hide();
         $("#everyDayShirtsCollectionPage").hide();
@@ -100,9 +95,10 @@ $(document).ready(function () {
         $("#creditCardPay").show();
         $("#paymentChoice").hide();
     })
-
+    subTotal = 0;
     // add products to cart
     $(".productBuyButton").click(function () {
+        
         var productId = $(this).attr("data-product-id");
         $(".productCart" + productId).show();
         $(".productReceipt" + productId).show();
@@ -114,15 +110,18 @@ $(document).ready(function () {
         } else {
             $("#cartCounter > p").css({ "font-size": "10px" });
         }
-        var addingTotal = parseInt($(".productCart" + productId).find("h3").text(), 10);
-        total += addingTotal;
-        console.log(total);
+        var addingTotal = $(".productCart" + productId).find("h3").text();
+        addingTotal = addingTotal.substring(1, addingTotal.length);
+        addingTotal = parseInt(addingTotal); 
+        subTotal += addingTotal;
+        console.log(subTotal);
     });
 
     // remove products from cart
     $(".productRemoveButton").click(function () {
         var productId = $(this).attr("data-cart-id");
         $(".productCart" + productId).hide();
+        $(".productReceipt" + productId).hide();
         counter--;
         $("#cartCounter > p").html(counter);
         if (counter <= 0) {
@@ -134,9 +133,13 @@ $(document).ready(function () {
         } else {
             $("#cartCounter > p").css({ "font-size": "10px" });
         }
+        var addingTotal = $(".productCart" + productId).find("h3").text();
+        addingTotal = addingTotal.substring(1, addingTotal.length);
+        addingTotal = parseInt(addingTotal); 
+        subTotal -= addingTotal;
+        console.log(subTotal);
     });
 
-    var subTotal = 40; //$().val();
     $("#ccPayButton").click(function (event) {
         var owner = $("#owner").val();
         var ccNumber = $("#cardNumber").val();
@@ -170,15 +173,23 @@ $(document).ready(function () {
             alert("");
         }
     })
+    total = 0;
 
-    $("#cashPaySubmit").click(function () {
+    function salesTax(total) {
+        total = subTotal * 1.06;
+        console.log(total);
+        return total;
+    }
+
+    total = salesTax(subTotal);
+    $(".cashPaySubmit").click(function () {
         var cashGiven = $("#cashTendered").val();
         if (cashGiven != null || cashGiven != "") {
             if (cashGiven >= total) {
                 var change = cashGiven - total;
+                $("#cashPay").hide();
                 $("#receiptPage").show();
                 $("#receiptPage > p").append(change);
-
             }
         }
     })
