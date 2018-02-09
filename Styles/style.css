@@ -497,7 +497,7 @@ hr {
   display: none;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
