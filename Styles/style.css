@@ -471,6 +471,9 @@ hr {
   text-align: left !important;
   width: 100px !important;
 }
+#cartPage h3 {
+  text-align: center;
+}
 
 #payMethods{
   display: flex;
@@ -490,54 +493,203 @@ hr {
 #dressShirtsCollectionPage {
   min-height: calc(100vh - 70px);
 }
+#sideNavAsTop{
+  display: none;
+}
 
 @media screen and (min-width: 420px) {
-  #sideNav {
-    width: 25%;
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  #sideNav{
+    display: none;
   }
-  h1 {
+  body {
+    background-color: white;
+  }
+  .topnav {
+    justify-content: space-between;  
+    z-index: 9;  
+    width: 99%;
+  }
+  #logo {
+    order: 1;
+  }
+  .topnav .sideNavButton {
+    display: none;
+  }
+  .topnav .cartButton {
+    order: 2;
+    margin-right: 10px;
+  }
+  #sideNavAsTop{
+    display: inline-block;
+    position: fixed;
+    top: -10px;
+    left: 210px;
+    z-index: 10;
+    font-size: .9em;
+  }
+  #dropdownTop {
+    display: flex;
+  }
+  #dropdownTop li {
+    background-color: white;
+    margin: 0 5px;
+  }
+  #everyDayShirtsCollectionImage {
+    width: 110%;
+    height: auto;
+    z-index: 8;
+    overflow: hidden;
+    margin-top: -5px;
+  }
+  #dressShirtsCollectionDiv{
+    width: 50%;
+    overflow: hidden;
+    height: auto;
+    float: left;
+  }
+  #jeansColletionDiv {
+    width: 50%;
+    overflow: hidden;
+    height: auto;
+    float: right;
+  }
+  .collectionText h1 {
+    font-size: 3em;
+  }
+  .collectionText h6 {
+    font-size: 1.5em;
+  }
+    
+  #everyDayShirtsCollectionDiv h1 {
     font-size: 5em;
   }
-  h6 {
+  #everyDayShirtsCollectionDivh6 {
     font-size: 2em;
   }
+
+  hr.footer {
+    width: 100%;
+  }
+  #emailFooter {
+    display: flex;
+    justify-content: center;
+  }
+  #emailHeadline{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    padding-right: 20px;
+  }
+  #emailFooter input {
+    width: 20%;
+    border: 1px solid #666666;
+  }
+  hr {
+    width: 80%;
+  }
   .productImage {
-    height: 175px;
+    height: 90%;
+    margin-left: 20%;
   }
   .productDiv {
-    height: 200px;
-    width: 50%;
+    height: 500px;
+    width: 70%;
     margin-top: 0%;
   }
   .productText {
     margin-left: 3%;
-    margin-top: 1%;
-    height: 200px;
+    margin-left: 7%;
+    margin-top: 8%;
+    height: 500px;
     float: left;
-    width: 50%;
-  }
-  .topnav {
-    padding-left: 20px;
-    padding-right: 20px;
+    width: 40%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: space-around;
   }
+
   .productBuyButton,
   .productRemoveButton {
-    float: right;
-    margin-top: 2%;
+    padding: 10px 30px;
+    border: none;
+    margin-right: 160px;
   }
-  #emailFooter input {
-    width: 20%;
+  #payMethods {
+    display: flex;
+    justify-content: center;
   }
-  #emailButton {
-    float: right;
-    margin-right: 64.35%;
+  #cashButton, #creditCardButton{
+    width:30%;
+    padding: 10px 0;
   }
-  hr {
-    width: 50%;
-    float: left;
+
+  #owner {
+    width: 150px;
   }
+  form {
+    padding: 0 10px;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  #ccPayButton {
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 50%;
+  }
+  #ccPay {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  #creditCardPay h4 {
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+
+  #cashTendered{
+    width: 30.6%;
+    margin-left: 34.6%;
+    padding: 15px 0;
+    font-size: 1.2em;
+  }
+  .cashLabel{
+    width:30%;
+  }
+  #cashTotalBefore, #cashSalesTax, #cashPayTotal {
+    margin-right: 45%;
+  }
+  #cashPay hr {
+    margin-right: 47%;
+  }
+  .cashPaySubmit{
+    width: 30%;
+    margin-left: 35%;
+  }
+  #invoice {
+    margin-right: 42%;
+  }
+
+  #cartCounter {
+    position: fixed;
+    right: 25px;
+    top: 3px;
+    width: 2em;
+    height: 2em;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+  }
+  
+  #cartCounter p {
+    font-size: 1.3em !important;
+    color: rgb(0, 0, 0);
+    padding-left: 3px;
+  }
+
   .jeanButton,
   .cartButton,
   .homeButton,
