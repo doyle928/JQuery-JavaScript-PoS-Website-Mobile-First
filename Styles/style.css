@@ -115,7 +115,8 @@ html {
   padding: 0;
   margin: 0;
 }
-#everyDayShirtsCollectionPage{
+
+#everyDayShirtsCollectionPage {
   display: none;
 }
 
@@ -130,8 +131,10 @@ html {
 #cartPage {
   display: none;
 }
+
 /* #receiptPage {
     /* display: none; */
+
 /* } */
 
 #paymentChoice {
@@ -301,6 +304,7 @@ hr {
 #payNow {
   width: 100%;
 }
+
 #receiptPage {
   display: block;
   margin-top: 60px;
@@ -327,15 +331,15 @@ hr {
   h6 {
     font-size: 2em;
   }
-  .productImage{
+  .productImage {
     height: 175px;
   }
-  .productDiv{
+  .productDiv {
     height: 200px;
     width: 50%;
     margin-top: 0%;
   }
-  .productText{
+  .productText {
     margin-left: 3%;
     margin-top: 1%;
     height: 200px;
@@ -348,7 +352,8 @@ hr {
     display: flex;
     justify-content: space-between;
   }
-  .productBuyButton, .productRemoveButton {
+  .productBuyButton,
+  .productRemoveButton {
     float: right;
     margin-top: 2%;
   }
@@ -363,6 +368,12 @@ hr {
     width: 50%;
     float: left;
   }
-
+  .jeanButton,
+  .cartButton,
+  .homeButton,
+  .everydayButton,
+  .dressButton,
+  .sideNavButton{
+    cursor: pointer;
+  }
 }
-
