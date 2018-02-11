@@ -13,8 +13,6 @@ $(document).ready(function () {
         $(".productReceipt" + (i + 1)).hide();
     }
 
-    // $("#receiptPage").hide();
-
     //moblie sliding nav bar
     $(".sideNavButton").click(function () {
         $("#sideNav").toggle("slide", 300);

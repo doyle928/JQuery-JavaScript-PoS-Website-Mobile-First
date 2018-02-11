@@ -183,6 +183,9 @@ button {
   margin-right: 1%;
   border: none;
 }
+.productBuyButton:hover, .productRemoveButton:hover, #ccPayButton:hover, #cashButton:hover, #creditCardButton:hover   {
+  background-color: black;
+}
 
 .productBuyButton{
   float: right;
@@ -332,6 +335,7 @@ select:focus {
 .footer {
   position: static;
   bottom: 0;
+  /* background-color: #e6ffff; */
 }
 
 hr {
@@ -358,6 +362,7 @@ hr {
   border-bottom: 1px solid rgb(230, 230, 230);
   width: 75%;
   height: 42px;
+  /* background-color: inherit; */
 }
 
 #payNow {
@@ -602,19 +607,20 @@ hr {
     width: 80%;
   }
   .productImage {
-    height: 90%;
+    height: auto;
+    width: 20%;
     margin-left: 20%;
   }
   .productDiv {
-    height: 500px;
+    height: auto;
     width: 70%;
     margin-top: 0%;
   }
   .productText {
     margin-left: 3%;
     margin-left: 7%;
-    margin-top: 8%;
-    height: 500px;
+    margin-top: 3%;
+    height: auto;
     float: left;
     width: 40%;
     display: flex;
@@ -625,7 +631,9 @@ hr {
   .productBuyButton,
   .productRemoveButton {
     border: none;
-    margin-right: 160px;
+    width: 20%;
+    min-width: 45px;
+    margin-top: 10%;
   }
   #payMethods {
     display: flex;
