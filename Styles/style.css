@@ -335,7 +335,7 @@ select:focus {
 .footer {
   position: static;
   bottom: 0;
-  /* background-color: #e6ffff; */
+  background-color: #e6ffff;
 }
 
 hr {
@@ -362,7 +362,8 @@ hr {
   border-bottom: 1px solid rgb(230, 230, 230);
   width: 75%;
   height: 42px;
-  /* background-color: inherit; */
+  background-color: inherit;
+  margin-bottom: 20px;
 }
 
 #payNow {
@@ -602,6 +603,7 @@ hr {
   #emailFooter input {
     width: 20%;
     border: 1px solid #666666;
+    background-color: inherit;
   }
   hr {
     width: 80%;
