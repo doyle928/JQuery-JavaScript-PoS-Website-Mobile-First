@@ -512,7 +512,7 @@ hr {
   display: none;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 768px) {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -585,7 +585,7 @@ hr {
   #everyDayShirtsCollectionDivh6 {
     font-size: 2em;
   }
-
+  
   hr.footer {
     width: 100%;
   }
