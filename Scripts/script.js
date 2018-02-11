@@ -1,6 +1,7 @@
 var counter = 0;
 var subTotal = 0;
 var total = 0;
+// latest
 $("#receiptPage").hide();
 $(document).ready(function () {
     $("#cashPay").hide();
