@@ -66,7 +66,10 @@ $(document).ready(function () {
         var productId = $(this).attr("data-product-id");
         $(".productCart" + productId).show();
         $(".productReceipt" + productId).show();
-        counter++;
+        var productQuantity = $("#quantityInput" + productId).val();
+        var productQuantity = parseInt(productQuantity);
+        console.log(productQuantity);
+        counter+=productQuantity;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
         if (counter >= 10) {
@@ -80,7 +83,7 @@ $(document).ready(function () {
         }
         var addingTotal = $(".productCart" + productId).find("h3").text();
         addingTotal = addingTotal.substring(1, addingTotal.length);
-        addingTotal = parseInt(addingTotal);
+        addingTotal = parseInt(addingTotal*productQuantity);
         subTotal += addingTotal;
         console.log(subTotal);
     });
