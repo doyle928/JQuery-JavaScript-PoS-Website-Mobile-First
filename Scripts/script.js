@@ -68,7 +68,6 @@ $(document).ready(function () {
         $(".productReceipt" + productId).show();
         var productQuantity = $("#quantityInput" + productId).val();
         var productQuantity = parseInt(productQuantity);
-        console.log(productQuantity);
         counter+=productQuantity;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
@@ -85,7 +84,9 @@ $(document).ready(function () {
         addingTotal = addingTotal.substring(1, addingTotal.length);
         addingTotal = parseInt(addingTotal*productQuantity);
         subTotal += addingTotal;
-        console.log(subTotal);
+        // Cart and receipt values
+        $("#qtySubtotal > .qtyWrite").text(productQuantity);
+        $("#qtySubtotal > .subtotalWrite").text(subTotal);
     });
 
     // remove products from cart
@@ -93,7 +94,9 @@ $(document).ready(function () {
         var productId = $(this).attr("data-cart-id");
         $(".productCart" + productId).hide();
         $(".productReceipt" + productId).hide();
-        counter--;
+        var productQuantity = $("#quantityInput" + productId).val();
+        var productQuantity = parseInt(productQuantity);
+        counter-=productQuantity;
         $("#cartCounter > p").html(counter);
         if (counter <= 0) {
             counter = 0;
@@ -110,9 +113,11 @@ $(document).ready(function () {
         }
         var addingTotal = $(".productCart" + productId).find("h3").text();
         addingTotal = addingTotal.substring(1, addingTotal.length);
-        addingTotal = parseInt(addingTotal);
+        addingTotal = parseInt(addingTotal*productQuantity);
         subTotal -= addingTotal;
-        console.log(subTotal);
+        // Cart and receipt values
+        $("#qtySubtotal > .qtyWrite").text(productQuantity);
+        $("#qtySubtotal > .subtotalWrite").text(subTotal);
     });
 
     $("#cashButton").click(function () {

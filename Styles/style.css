@@ -151,6 +151,13 @@ html {
   width: 60%;
 }
 
+.quantityInput {
+  width: 45px;
+}
+#qtySubtotal{
+  display: inline-block;
+}
+
 h2,
 h3,
 h4 {
@@ -177,12 +184,14 @@ button {
   border: none;
 }
 
-.productBuyButton,
+.productBuyButton{
+  float: right;
+  margin-top: -12%;
+}
 .productRemoveButton {
   float: right;
   margin-top: -12%;
 }
-
 #creditCardPay {
   color: #666666;
   text-align: center;
@@ -472,7 +481,7 @@ hr {
   width: 100px !important;
 }
 #cartPage h3 {
-  text-align: center;
+  text-align: left;
 }
 
 #payMethods{
@@ -509,8 +518,8 @@ hr {
     background-color: white;
   }
   .topnav {
-    justify-content: space-between;  
-    z-index: 9;  
+    justify-content: space-between;
+    z-index: 9;
     width: 99%;
   }
   #logo {
@@ -563,7 +572,7 @@ hr {
   .collectionText h6 {
     font-size: 1.5em;
   }
-    
+
   #everyDayShirtsCollectionDiv h1 {
     font-size: 5em;
   }
@@ -615,7 +624,6 @@ hr {
 
   .productBuyButton,
   .productRemoveButton {
-    padding: 10px 30px;
     border: none;
     margin-right: 160px;
   }
@@ -683,7 +691,7 @@ hr {
     background-color: rgba(0, 0, 0, 0);
     font-weight: bold;
   }
-  
+
   #cartCounter p {
     font-size: 1.3em !important;
     color: rgb(0, 0, 0);
