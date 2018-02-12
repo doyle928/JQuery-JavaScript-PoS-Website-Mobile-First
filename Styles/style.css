@@ -524,7 +524,7 @@ hr {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
-}
+  }
   #sideNav{
     display: none;
   }
@@ -718,6 +718,12 @@ hr {
     font-size: 1.3em !important;
     color: rgb(0, 0, 0);
     padding-left: 3px;
+  }
+  .listitem {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 5px;
+    font-weight: bold;
   }
 
   .jeanButton,
