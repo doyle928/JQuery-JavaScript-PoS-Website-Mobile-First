@@ -573,10 +573,12 @@ hr {
     float: right;
   }
   .collectionText h1 {
-    font-size: 3em;
+    font-size: 2em;
+    margin: 0px;
   }
   .collectionText h6 {
-    font-size: 1.5em;
+    font-size: 1em;
+    margin-top: 10px;
   }
 
   #everyDayShirtsCollectionDiv h1 {
