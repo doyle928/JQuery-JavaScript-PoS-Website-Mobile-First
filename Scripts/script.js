@@ -146,7 +146,7 @@ $(document).ready(function () {
         }
         
     });
-
+    // Pay with cash form
     $("#cashButton").click(function () {
         $("#cashTotalBefore > .typeTo").empty();
         $("#main").hide();
@@ -168,6 +168,7 @@ $(document).ready(function () {
         var totalRound = Math.round((subTotal * salesTax) * 100) / 100;
         $("#cashPayTotal > .typeTo").text("$" + totalRound);
     })
+    // Pay with credit card form
     $("#creditCardButton").click(function () {
         $("#cashTotalBeforeCC > .typeTo").empty();
         $("#main").hide();
@@ -190,7 +191,7 @@ $(document).ready(function () {
         var totalRound = Math.round((subTotal * salesTax) * 100) / 100;
         $("#cashPayTotalCC > .typeTo").text("$" + totalRound);
     })
-
+    // Submit credit card payment
     $("#ccPayButton").click(function (event) {
         var owner = $("#owner").val();
         var ccNumber = $("#cardNumber").val();
@@ -240,6 +241,7 @@ $(document).ready(function () {
         }
 
     })
+    // Submit cash payment
     $(".cashPaySubmit").click(function () {
         var cashGiven = $("#cashTendered").val();
         var salesTax = $("#cashSalesTaxCC > .typeTo").text();
