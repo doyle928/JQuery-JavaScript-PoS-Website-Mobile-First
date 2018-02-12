@@ -183,17 +183,19 @@ button {
   margin-right: 1%;
   border: none;
 }
-.productBuyButton:hover, .productRemoveButton:hover, #ccPayButton:hover, #cashButton:hover, #creditCardButton:hover   {
+.productBuyButton:hover, .productRemoveButton:hover, #ccPayButton:hover, #cashButton:hover, #creditCardButton:hover {
   background-color: black;
 }
-
 .productBuyButton{
   float: right;
   margin-top: -12%;
 }
 .productRemoveButton {
   float: right;
-  margin-top: -12%;
+  margin-top: 0%;
+}
+.productPriceCalc {
+  display: none;
 }
 #creditCardPay {
   color: #666666;
@@ -455,7 +457,7 @@ hr {
   margin-top: 60px;
 }
 
-#receiptPage h2 {
+.h2Receipt {
   text-align: center;
 }
 
@@ -488,6 +490,12 @@ hr {
 }
 #cartPage h3 {
   text-align: left;
+}
+.qtySubtotal {
+  display: inline-block;
+}
+.qtySubtotalCost {
+  display: inline-block;
 }
 
 #payMethods{
@@ -588,7 +596,7 @@ hr {
   #everyDayShirtsCollectionDivh6 {
     font-size: 2em;
   }
-  
+
   hr.footer {
     width: 100%;
   }

@@ -85,10 +85,10 @@ $(document).ready(function () {
             $("#cartCounter > p").css({
                 "font-size": "10px"
             });
-        }       
+        }
         if(isNaN(quantityCheck)){
             quantityCheck = 0;
-        }        
+        }
         if(isNaN(quantityPriceCheck)){
             quantityPriceCheck = 0;
         }
@@ -105,6 +105,7 @@ $(document).ready(function () {
         $(".productCart" + productId).find(".qtyWrite").empty();
         var productId = $(this).attr("data-cart-id");
         var addingTotal = $(".productCart" + productId).find("h3").text();
+        console.log(addingTotal);
         addingTotal = addingTotal.substring(1, addingTotal.length);
         addingTotal = parseInt(addingTotal);
         subTotal -= addingTotal;
@@ -142,9 +143,9 @@ $(document).ready(function () {
             $(".productCart" + productId).hide();
             $(".productReceipt" + productId).hide();
             $(".productCart" + productId).find(".subtotalWrite").empty();
-            $(".productCart" + productId).find(".qtyWrite").empty();           
+            $(".productCart" + productId).find(".qtyWrite").empty();
         }
-        
+
     });
     // Pay with cash form
     $("#cashButton").click(function () {
