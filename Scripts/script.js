@@ -87,10 +87,17 @@ $(document).ready(function () {
             });
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(isNaN(quantityCheck)){
             quantityCheck = 0;
         }
         if(isNaN(quantityPriceCheck)){
+=======
+        if (isNaN(quantityCheck)) {
+            quantityCheck = 0;
+        }
+        if (isNaN(quantityPriceCheck)) {
+>>>>>>> b58d076dc512cded011dcb97531cb56c7e51618c
 =======
         if (isNaN(quantityCheck)) {
             quantityCheck = 0;
