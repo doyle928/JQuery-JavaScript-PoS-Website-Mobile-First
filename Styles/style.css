@@ -527,6 +527,7 @@ hr {
     justify-content: space-between;
     z-index: 9;
     width: 99%;
+    margin-left: 1%;
   }
   #logo {
     order: 1;
