@@ -9,9 +9,9 @@ $(document).ready(function () {
     $("#cartCounter").hide();
     $("#cartCounter").hide();
     $("#invoice").hide();
-    for (i = 0; i < 12; i++) {
-        $(".productCart" + (i + 1)).hide();
-        $(".productReceipt" + (i + 1)).hide();
+    for (i = 1; i <= 12; i++) {
+        $(".productCart" + i).hide();
+        $(".productReceipt" + i).hide();
     }
 
     //moblie sliding nav bar
@@ -72,9 +72,9 @@ $(document).ready(function () {
         quantityCheck = parseInt(quantityCheck);
         quantityPriceCheck = parseInt(quantityPriceCheck);
         addingTotal = addingTotal.substring(1, addingTotal.length);
-        addingTotal = parseInt(addingTotal*productQuantity);
+        addingTotal = parseInt(addingTotal * productQuantity);
         subTotal += addingTotal;
-        counter+=productQuantity;
+        counter += productQuantity;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
         if (counter >= 10) {
@@ -85,11 +85,11 @@ $(document).ready(function () {
             $("#cartCounter > p").css({
                 "font-size": "10px"
             });
-        }       
-        if(isNaN(quantityCheck)){
+        }
+        if (isNaN(quantityCheck)) {
             quantityCheck = 0;
-        }        
-        if(isNaN(quantityPriceCheck)){
+        }
+        if (isNaN(quantityPriceCheck)) {
             quantityPriceCheck = 0;
         }
         $(".productCart" + productId).find(".qtyWrite").empty();
@@ -129,7 +129,7 @@ $(document).ready(function () {
         var quantityPriceAdjust = $(".productCart" + productId).find(".subtotalWrite").text();
         quantityPriceAdjust = parseInt(quantityPriceAdjust);
         quantityCheck--;
-        if(quantityCheck >= 1){
+        if (quantityCheck >= 1) {
             var priceCheck = $(".productCart" + productId).find("h3").text();
             priceCheck = priceCheck.substring(1, priceCheck.length);
             priceCheck = parseInt(priceCheck);
@@ -137,14 +137,13 @@ $(document).ready(function () {
             $(".productCart" + productId).find(".qtyWrite").text(quantityCheck);
             $(".productCart" + productId).find(".subtotalWrite").text(quantityPriceAdjust);
 
-        }
-        else {
+        } else {
             $(".productCart" + productId).hide();
             $(".productReceipt" + productId).hide();
             $(".productCart" + productId).find(".subtotalWrite").empty();
-            $(".productCart" + productId).find(".qtyWrite").empty();           
+            $(".productCart" + productId).find(".qtyWrite").empty();
         }
-        
+
     });
     // Pay with cash form
     $("#cashButton").click(function () {
@@ -219,9 +218,19 @@ $(document).ready(function () {
                     $("#invoice").show();
                     $("#invoiceCashChange").hide();
                     $("#invoiceCashPaid").hide();
+                    for (i = 1; i <= 12; i++) {
+                        $(".productCart" + i).hide();
+                        $(".productCart" + i).find(".subtotalWrite").empty();
+                        $(".productCart" + i).find(".qtyWrite").empty();
+                    }
+                    counter = 0;
+                    $("#cartCounter").hide();
+                    $("#cartCounter > p").html(counter);
+                    $(".productCart" + productId).find(".subtotalWrite").empty();
+                    $(".productCart" + productId).find(".qtyWrite").empty();
                     $("#invoicePayment > .invoiceWrite").text("Credit Card");
                     $("#invoiceTotal > .invoiceWrite").text("$" + (Math.round(total * 100) / 100));
-                    ccNumber = ccNumber.substring(15,19);
+                    ccNumber = ccNumber.substring(15, 19);
                     $("#invoiceCard > .invoiceWrite").text("-" + ccNumber);
 
                 } else {
@@ -264,6 +273,14 @@ $(document).ready(function () {
                 $("#invoiceCard").hide();
                 $(".cashFormFail").hide();
                 $(".cashFail").hide();
+                for (i = 1; i <= 12; i++) {
+                    $(".productCart" + i).hide();
+                    $(".productCart" + i).find(".subtotalWrite").empty();
+                    $(".productCart" + i).find(".qtyWrite").empty();
+                }
+                counter = 0;
+                $("#cartCounter").hide();
+                $("#cartCounter > p").html(counter);
                 $("#invoicePayment > .invoiceWrite").text("Cash");
                 $("#invoiceTotal > .invoiceWrite").text("$" + (Math.round(total * 100) / 100));
                 $("#invoiceCashPaid > .invoiceWrite").text("$" + cashGiven);
