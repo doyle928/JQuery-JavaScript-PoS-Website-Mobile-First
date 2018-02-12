@@ -538,6 +538,7 @@ hr {
   .topnav .cartButton {
     order: 2;
     margin-right: 10px;
+    padding-right: 15px;
   }
   #sideNavAsTop{
     display: inline-block;
