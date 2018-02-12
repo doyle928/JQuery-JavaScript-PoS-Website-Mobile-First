@@ -535,7 +535,7 @@ hr {
     justify-content: space-between;
     z-index: 9;
     width: 99%;
-    margin-left: 1%;
+    padding-left: 1%;
   }
   #logo {
     order: 1;
@@ -546,6 +546,7 @@ hr {
   .topnav .cartButton {
     order: 2;
     margin-right: 10px;
+    padding-right: 15px;
   }
   #sideNavAsTop{
     display: inline-block;
@@ -553,7 +554,7 @@ hr {
     top: -10px;
     left: 210px;
     z-index: 10;
-    font-size: .9em;
+    font-size: 1em;
   }
   #dropdownTop {
     display: flex;
@@ -593,7 +594,7 @@ hr {
   #everyDayShirtsCollectionDiv h1 {
     font-size: 5em;
   }
-  #everyDayShirtsCollectionDivh6 {
+  #everyDayShirtsCollectionDiv h6 {
     font-size: 2em;
   }
 
