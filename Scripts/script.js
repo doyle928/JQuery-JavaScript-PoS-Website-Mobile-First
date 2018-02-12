@@ -227,8 +227,6 @@ $(document).ready(function () {
                     counter = 0;
                     $("#cartCounter").hide();
                     $("#cartCounter > p").html(counter);
-                    $(".productCart" + productId).find(".subtotalWrite").empty();
-                    $(".productCart" + productId).find(".qtyWrite").empty();
                     $("#invoicePayment > .invoiceWrite").text("Credit Card");
                     $("#invoiceTotal > .invoiceWrite").text("$" + (Math.round(total * 100) / 100));
                     ccNumber = ccNumber.substring(15, 19);
