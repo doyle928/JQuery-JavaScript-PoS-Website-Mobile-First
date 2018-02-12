@@ -61,12 +61,19 @@ $(document).ready(function () {
     subTotal = 0;
     // add products to cart
     $(".productBuyButton").click(function () {
-
         var productId = $(this).attr("data-product-id");
         $(".productCart" + productId).show();
         $(".productReceipt" + productId).show();
+        var quantityCheck = $(".productCart" + productId).find(".qtyWrite").text();
+        var quantityPriceCheck = $(".productCart" + productId).find(".subtotalWrite").text();
         var productQuantity = $("#quantityInput" + productId).val();
-        var productQuantity = parseInt(productQuantity);
+        productQuantity = parseInt(productQuantity);
+        var addingTotal = $(".productCart" + productId).find("h3").text();
+        quantityCheck = parseInt(quantityCheck);
+        quantityPriceCheck = parseInt(quantityPriceCheck);
+        addingTotal = addingTotal.substring(1, addingTotal.length);
+        addingTotal = parseInt(addingTotal*productQuantity);
+        subTotal += addingTotal;
         counter+=productQuantity;
         $("#cartCounter").show();
         $("#cartCounter > p").html(counter);
@@ -78,24 +85,30 @@ $(document).ready(function () {
             $("#cartCounter > p").css({
                 "font-size": "10px"
             });
+        }       
+        if(isNaN(quantityCheck)){
+            quantityCheck = 0;
+        }        
+        if(isNaN(quantityPriceCheck)){
+            quantityPriceCheck = 0;
         }
-        var addingTotal = $(".productCart" + productId).find("h3").text();
-        addingTotal = addingTotal.substring(1, addingTotal.length);
-        addingTotal = parseInt(addingTotal*productQuantity);
-        subTotal += addingTotal;
-        // Cart and receipt values
-        $("#qtySubtotal > .qtyWrite").text(productQuantity);
-        $("#qtySubtotal > .subtotalWrite").text(subTotal);
+        $(".productCart" + productId).find(".qtyWrite").empty();
+        $(".productCart" + productId).find(".subtotalWrite").empty();
+        productQuantity = parseInt(productQuantity + quantityCheck);
+        $(".qtySubtotal" + productId).find(".qtyWrite").html(productQuantity);
+        $(".qtySubtotal" + productId).find(".subtotalWrite").text(addingTotal * productQuantity);
     });
 
     // remove products from cart
     $(".productRemoveButton").click(function () {
+        $(".productCart" + productId).find(".subtotalWrite").empty();
+        $(".productCart" + productId).find(".qtyWrite").empty();
         var productId = $(this).attr("data-cart-id");
-        $(".productCart" + productId).hide();
-        $(".productReceipt" + productId).hide();
-        var productQuantity = $("#quantityInput" + productId).val();
-        var productQuantity = parseInt(productQuantity);
-        counter-=productQuantity;
+        var addingTotal = $(".productCart" + productId).find("h3").text();
+        addingTotal = addingTotal.substring(1, addingTotal.length);
+        addingTotal = parseInt(addingTotal);
+        subTotal -= addingTotal;
+        counter--;
         $("#cartCounter > p").html(counter);
         if (counter <= 0) {
             counter = 0;
@@ -110,13 +123,28 @@ $(document).ready(function () {
                 "font-size": "10px"
             });
         }
-        var addingTotal = $(".productCart" + productId).find("h3").text();
-        addingTotal = addingTotal.substring(1, addingTotal.length);
-        addingTotal = parseInt(addingTotal*productQuantity);
-        subTotal -= addingTotal;
         // Cart and receipt values
-        $("#qtySubtotal > .qtyWrite").text(productQuantity);
-        $("#qtySubtotal > .subtotalWrite").text(subTotal);
+        var quantityCheck = $(".productCart" + productId).find(".qtyWrite").text();
+        quantityCheck = parseInt(quantityCheck);
+        var quantityPriceAdjust = $(".productCart" + productId).find(".subtotalWrite").text();
+        quantityPriceAdjust = parseInt(quantityPriceAdjust);
+        quantityCheck--;
+        if(quantityCheck >= 1){
+            var priceCheck = $(".productCart" + productId).find("h3").text();
+            priceCheck = priceCheck.substring(1, priceCheck.length);
+            priceCheck = parseInt(priceCheck);
+            quantityPriceAdjust -= priceCheck;
+            $(".productCart" + productId).find(".qtyWrite").text(quantityCheck);
+            $(".productCart" + productId).find(".subtotalWrite").text(quantityPriceAdjust);
+
+        }
+        else {
+            $(".productCart" + productId).hide();
+            $(".productReceipt" + productId).hide();
+            $(".productCart" + productId).find(".subtotalWrite").empty();
+            $(".productCart" + productId).find(".qtyWrite").empty();           
+        }
+        
     });
 
     $("#cashButton").click(function () {
